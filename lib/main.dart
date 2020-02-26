@@ -9,7 +9,6 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -19,14 +18,13 @@ class _MyAppState extends State<MyApp> {
           backgroundColor: Color(0xffFF7216),
           title: Text("Fast Quran"),
           actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.info_outline),
-            onPressed: () {},
-          )
+            IconButton(
+              icon: Icon(Icons.info_outline),
+              onPressed: () {},
+            )
           ],
         ),
         body: DisplayListView(),
-
       ),
     );
   }
