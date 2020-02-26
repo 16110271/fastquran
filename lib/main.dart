@@ -1,3 +1,4 @@
+import 'package:Fast_Quran/mainmenu.dart';
 import 'package:flutter/material.dart';
 import 'HurufModel.dart';
 
@@ -12,19 +13,11 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: 'Montserrat'),
       home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Color(0xffFF7216),
-          title: Text("Fast Quran"),
-          actions: <Widget>[
-            IconButton(
-              icon: Icon(Icons.info_outline),
-              onPressed: () {},
-            )
-          ],
-        ),
-        body: DisplayListView(),
+        
+        body: MainMenu(),
       ),
     );
   }
