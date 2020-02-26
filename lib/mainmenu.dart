@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 
 class MainMenu extends StatefulWidget {
@@ -26,13 +24,8 @@ class _MainMenuState extends State<MainMenu> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
-                  Container(
-                    padding: EdgeInsets.only(top: 40),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: <Widget>[],
-                    ),
-                  )
+                  Text("Hai, Selamat Datang di FastQuran!",
+                      style: TextStyle(color: Colors.white, fontSize: 120)),
                 ],
               ),
             ),
