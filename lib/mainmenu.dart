@@ -36,6 +36,7 @@ class _MainMenuState extends State<MainMenu> {
               child: Column(
                 children: <Widget>[
                   Container(
+                    decoration: new BoxDecoration(color: Color(0xffFF7216)),
                     margin: EdgeInsets.only(top: 20),
                     child: Column(children: <Widget>[
                       Text('Cara Pengucapan',
