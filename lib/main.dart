@@ -16,7 +16,7 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData(fontFamily: 'Montserrat'),
       home: Scaffold(
         
-        body: splash(),
+        body: Splash(),
       ),
     );
   }

@@ -6,12 +6,12 @@ void main() {
   runApp(MaterialApp(home: MainMenu()));
 }
 
-class splash extends StatefulWidget {
+class Splash extends StatefulWidget {
   @override
-  _splashState createState() => _splashState();
+  _SplashState createState() => _SplashState();
 }
 
-class _splashState extends State<splash> {
+class _SplashState extends State<Splash> {
   @override
   void initState() {
     super.initState();
@@ -27,7 +27,7 @@ class _splashState extends State<splash> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(child: Image.asset('image/logo.png')),
+      body: Center(child: FlutterLogo(size: 200)),
     );
   }
 }
