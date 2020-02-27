@@ -25,8 +25,6 @@ class _DetailAppState extends State<DetailApp> {
     initPlayer();
   }
 
-  
-
   void initPlayer() {
     advancedPlayer = new AudioPlayer();
     audioCache = new AudioCache(fixedPlayer: advancedPlayer);
@@ -42,22 +40,6 @@ class _DetailAppState extends State<DetailApp> {
 
   @override
   Widget build(BuildContext context) {
-    //var _fathahOnPress;
-    //var _kasrahOnPress;
-    //var _dhomahOnPress;
-
-    // if (_fathahOnPress = true) {
-    //  () => audioCache.play(widget.huruf.suaraF);
-    //}
-
-    //if (_kasrahOnPress = true) {
-    //  () => audioCache.play(widget.huruf.suaraK);
-    //}
-
-    //if (_dhomahOnPress = true) {
-    //() => audioCache.play(widget.huruf.suaraD);
-    //}
-
     print(widget.huruf.kategori);
     return Scaffold(
       appBar: AppBar(
