@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/gestures.dart';
+
+import 'HurufModel.dart';
 
 class MainMenu extends StatefulWidget {
   @override
@@ -56,7 +59,12 @@ class _MainMenuState extends State<MainMenu> {
           Padding(
             padding:
                 const EdgeInsets.only(top: 230, bottom: 0, left: 40, right: 40),
-            child: Container(
+            child: new GestureDetector(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => DisplayListView()));
+              },
+              child: Container(
                 height: 200,
                 width: 350,
                 decoration: new BoxDecoration(
@@ -71,7 +79,7 @@ class _MainMenuState extends State<MainMenu> {
                     borderRadius: new BorderRadius.all(Radius.circular(10))),
                 child: Column(
                   children: <Widget>[
-                    Container(child: Image.asset('1.jpg')),
+                    Container(child: Image.asset('al-quran.jpg')),
                     Container(
                       child: Column(children: <Widget>[
                         Text("Detail Huruf"),
@@ -79,7 +87,9 @@ class _MainMenuState extends State<MainMenu> {
                       ]),
                     )
                   ],
-                )),
+                ),
+              ),
+            ),
           )
         ],
       ),
