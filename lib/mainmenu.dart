@@ -87,6 +87,7 @@ class _MainMenuState extends State<MainMenu> {
                 child: Column(
                   children: <Widget>[
                     Container(
+                      child: Image.asset('image/1.jpg'),
                         height: 80,
                         decoration: new BoxDecoration(
                             color: Colors.black26,
