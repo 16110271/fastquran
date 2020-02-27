@@ -71,16 +71,14 @@ class _MainMenuState extends State<MainMenu> {
                     borderRadius: new BorderRadius.all(Radius.circular(10))),
                 child: Column(
                   children: <Widget>[
-                 Container(
-                   child: Image.asset('images/imgfirst.jpg')
-                   ),
-                  Container(
-                    child: Column(
-                      children:<Widget>[
-                      Text("Detail Huruf"),
-                      Text("Bla bla bla")
+                    Container(child: Image.asset('images/imgfirst.jpg')),
+                    Container(
+                      child: Column(children: <Widget>[
+                        Text("Detail Huruf"),
+                        Text("Bla bla bla")
                       ]),
-                  )],
+                    )
+                  ],
                 )),
           )
         ],

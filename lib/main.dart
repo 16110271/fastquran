@@ -1,6 +1,5 @@
 import 'package:Fast_Quran/mainmenu.dart';
 import 'package:flutter/material.dart';
-import 'HurufModel.dart';
 
 void main() => runApp(MyApp());
 
