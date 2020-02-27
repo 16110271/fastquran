@@ -87,8 +87,8 @@ class _MainMenuState extends State<MainMenu> {
                 child: Column(
                   children: <Widget>[
                     Container(
-                      child: Image.asset('image/1.jpg'),
-                        height: 80,
+                      child: Image.asset('image/menu1.png'),
+                        
                         decoration: new BoxDecoration(
                             color: Colors.black26,
                             borderRadius: new BorderRadius.only(
@@ -145,7 +145,7 @@ class _MainMenuState extends State<MainMenu> {
                 child: Column(
                   children: <Widget>[
                     Container(
-                        height: 80,
+                        child: Image.asset('image/menu2.png'),
                         decoration: new BoxDecoration(
                             color: Colors.black26,
                             borderRadius: new BorderRadius.only(
