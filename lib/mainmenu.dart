@@ -13,7 +13,7 @@ class _MainMenuState extends State<MainMenu> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xEFEFEF),
+      backgroundColor: Color(0xffEFEFEF),
       body: Stack(
         children: <Widget>[
           Container(

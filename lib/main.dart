@@ -1,4 +1,4 @@
-import 'package:Fast_Quran/mainmenu.dart';
+import 'package:Fast_Quran/Splash.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -16,7 +16,7 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData(fontFamily: 'Montserrat'),
       home: Scaffold(
         
-        body: MainMenu(),
+        body: splash(),
       ),
     );
   }
