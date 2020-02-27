@@ -50,16 +50,13 @@ class _MainMenuState extends State<MainMenu> {
                     ),
                   ),
                 ),
-                Center(
-                  child: Container(),
-                )
               ],
             ),
           ),
           Padding(
             padding:
                 const EdgeInsets.only(top: 230, bottom: 0, left: 40, right: 40),
-            child: new GestureDetector(
+            child: InkWell(
               onTap: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => DisplayListView()));
@@ -79,10 +76,14 @@ class _MainMenuState extends State<MainMenu> {
                     borderRadius: new BorderRadius.all(Radius.circular(10))),
                 child: Column(
                   children: <Widget>[
-                    Container(child: Image.asset('al-quran.jpg')),
+                    Container(),
                     Container(
                       child: Column(children: <Widget>[
-                        Text("Detail Huruf"),
+                        Text("Detail Huruf",
+                            style: TextStyle(
+                                color: Color(0xffFF7216),
+                                fontWeight: FontWeight.bold,
+                                fontSize: 25)),
                         Text("Bla bla bla")
                       ]),
                     )
