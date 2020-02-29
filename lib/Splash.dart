@@ -27,7 +27,8 @@ class _SplashState extends State<Splash> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(child: Image.asset('image/logo.png'))//FlutterLogo(size: 200)),
+      body: Center(child: Image.asset('image/logo.png',
+      height:90))//FlutterLogo(size: 200)),
     );
   }
 }
