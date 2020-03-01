@@ -63,6 +63,43 @@ class _MainMenuState extends State<MainMenu> {
               ],
             ),
           ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: <Widget>[
+              Padding(
+                padding: const EdgeInsets.only(top: 70, right: 25),
+                child: Container(
+                    child: IconButton(
+                        icon: Icon(Icons.info_outline, color: Colors.white),
+                        onPressed: () {
+                          showDialog(
+                              context: context,
+                              builder: (BuildContext context) {
+                                return AlertDialog(
+                                  title: Text('FastQuran'),
+                                  content: SingleChildScrollView(
+                                    child: ListBody(
+                                      children: <Widget>[
+                                        Text(
+                                            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'),
+                                        
+                                      ],
+                                    ),
+                                  ),
+                                  actions: <Widget>[
+                                    FlatButton(
+                                      child: Text('Regret'),
+                                      onPressed: () {
+                                        Navigator.of(context).pop();
+                                      },
+                                    ),
+                                  ],
+                                );
+                              });
+                        })),
+              ),
+            ],
+          ),
           Padding(
             padding:
                 const EdgeInsets.only(top: 245, bottom: 0, left: 40, right: 40),
@@ -87,8 +124,7 @@ class _MainMenuState extends State<MainMenu> {
                 child: Column(
                   children: <Widget>[
                     Container(
-                      child: Image.asset('image/menu1.png'),
-                        
+                        child: Image.asset('image/menu1.png'),
                         decoration: new BoxDecoration(
                             color: Colors.black26,
                             borderRadius: new BorderRadius.only(
