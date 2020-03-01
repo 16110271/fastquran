@@ -31,7 +31,7 @@ class _GamesState extends State<Game> {
             child: Column(
           children: <Widget>[
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(15.0),
               child: Row(
                 children: <Widget>[
                   Padding(
@@ -123,7 +123,7 @@ class _GamesState extends State<Game> {
                 ],
               ),
             ), Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(15.0),
               child: Row(
                 children: <Widget>[
                   Padding(
@@ -215,7 +215,7 @@ class _GamesState extends State<Game> {
                 ],
               ),
             ), Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(15.0),
               child: Row(
                 children: <Widget>[
                   Padding(
@@ -307,7 +307,7 @@ class _GamesState extends State<Game> {
                 ],
               ),
             ), Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(15.0),
               child: Row(
                 children: <Widget>[
                   Padding(
