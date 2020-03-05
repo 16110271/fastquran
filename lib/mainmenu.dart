@@ -1,4 +1,5 @@
 import 'package:Fast_Quran/game.dart';
+import 'package:Fast_Quran/gameTry.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
 
@@ -163,7 +164,7 @@ class _MainMenuState extends State<MainMenu> {
             child: InkWell(
               onTap: () {
                 Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => Game()));
+                    context, MaterialPageRoute(builder: (context) => GameTry()));
               },
               child: Container(
                 height: 200,
