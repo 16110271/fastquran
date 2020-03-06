@@ -1,4 +1,4 @@
-import 'package:Fast_Quran/game.dart';
+//import 'package:Fast_Quran/game.dart';
 import 'package:Fast_Quran/gameTry.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
