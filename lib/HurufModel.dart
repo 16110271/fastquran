@@ -326,45 +326,40 @@ class _DisplayListViewState extends State {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-          appBar: AppBar(
+      appBar: AppBar(
         backgroundColor: Color(0xffFF7216),
         title: Text(
           "List Huruf",
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
       ),
-          body: Container(
-            padding: EdgeInsets.only(right: 10),
-            child: ListView.builder(
-              itemCount: listHuruf.length,
-              itemBuilder: (context, int i) => Column(
-                children: [
-                  new ListTile(
-                    title: new Text(
-                      listHuruf[i].nama,
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    ),
-                    subtitle: new Text(listHuruf[i].kategori),
-                    trailing: new Text(listHuruf[i].gambar,
-                        style: TextStyle(fontFamily: 'DUBAI', fontSize: 30)),
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => DetailApp(
-                                    huruf: listHuruf[i],
-                                  )));
-                    },
-                    onLongPress: () {
-                      print(
-                        Text("Long Pressed"),
-                      );
-                    },
-                  ),
-                ],
+      body: Container(
+        padding: EdgeInsets.only(right: 10),
+        child: ListView.builder(
+          itemCount: listHuruf.length,
+          itemBuilder: (context, int i) => Column(
+            children: [
+              new ListTile(
+                title: new Text(
+                  listHuruf[i].nama,
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                subtitle: new Text(listHuruf[i].kategori),
+                trailing: new Text(listHuruf[i].gambar,
+                    style: TextStyle(fontFamily: 'DUBAI', fontSize: 30)),
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => DetailApp(
+                                huruf: listHuruf[i],
+                              )));
+                },
               ),
-            ),
+            ],
           ),
-        );
+        ),
+      ),
+    );
   }
 }

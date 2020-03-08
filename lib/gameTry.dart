@@ -83,7 +83,7 @@ class _GameTryState extends State<GameTry> {
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       color:
-                          _current == index ? Colors.redAccent : Colors.green,
+                          _current == index ? Colors.redAccent : Color(0xffF2f2f2f),
                     ),
                   );
                 }),
@@ -94,9 +94,362 @@ class _GameTryState extends State<GameTry> {
             ],
           ),
         ),
-        Container(
-
-        )
+        
+          Container(
+            child: Column(
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.only(top: 50, left: 10),
+              child: Row(
+                //baris 1
+                children: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.all(3),
+                    child: Container(
+                      //kotak-kotak
+                      height: 50,
+                      width: 50,
+                      decoration: BoxDecoration(
+                          color: Color(0xffFF7216),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black26,
+                              blurRadius: 6.0,
+                              offset: Offset(2, 2),
+                            )
+                          ],
+                          borderRadius: BorderRadius.all(Radius.circular(6)),
+                          border: Border.all(
+                            width: 4,
+                            color: const Color(0xFFFFFFFF),
+                          )),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(3.0),
+                    child: Container(
+                      //kotak-kotak
+                      height: 50,
+                      width: 50,
+                      decoration: BoxDecoration(
+                          color: Color(0xffFF7216),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black26,
+                              blurRadius: 6.0,
+                              offset: Offset(2, 2),
+                            )
+                          ],
+                          borderRadius: BorderRadius.all(Radius.circular(6)),
+                          border: Border.all(
+                            width: 4,
+                            color: const Color(0xFFFFFFFF),
+                          )),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(3.0),
+                    child: Container(
+                      //kotak-kotak
+                      height: 50,
+                      width: 50,
+                      decoration: BoxDecoration(
+                          color: Color(0xffFF7216),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black26,
+                              blurRadius: 6.0,
+                              offset: Offset(2, 2),
+                            )
+                          ],
+                          borderRadius: BorderRadius.all(Radius.circular(6)),
+                          border: Border.all(
+                            width: 4,
+                            color: const Color(0xFFFFFFFF),
+                          )),
+                    ),
+                  )
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 10, left: 10),
+              child: Row(
+                //baris 2
+                children: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.all(3),
+                    child: Container(
+                      //kotak-kotak
+                      height: 50,
+                      width: 50,
+                      decoration: BoxDecoration(
+                          color: Color(0xffFF7216),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black26,
+                              blurRadius: 6.0,
+                              offset: Offset(2, 2),
+                            )
+                          ],
+                          borderRadius: BorderRadius.all(Radius.circular(6)),
+                          border: Border.all(
+                            width: 4,
+                            color: const Color(0xFFFFFFFF),
+                          )),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(3.0),
+                    child: Container(
+                      //kotak-kotak
+                      height: 50,
+                      width: 50,
+                      decoration: BoxDecoration(
+                          color: Color(0xffFF7216),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black26,
+                              blurRadius: 6.0,
+                              offset: Offset(2, 2),
+                            )
+                          ],
+                          borderRadius: BorderRadius.all(Radius.circular(6)),
+                          border: Border.all(
+                            width: 4,
+                            color: const Color(0xFFFFFFFF),
+                          )),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(3.0),
+                    child: Container(
+                      //kotak-kotak
+                      height: 50,
+                      width: 50,
+                      decoration: BoxDecoration(
+                          color: Color(0xffFF7216),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black26,
+                              blurRadius: 6.0,
+                              offset: Offset(2, 2),
+                            )
+                          ],
+                          borderRadius: BorderRadius.all(Radius.circular(6)),
+                          border: Border.all(
+                            width: 4,
+                            color: const Color(0xFFFFFFFF),
+                          )),
+                    ),
+                  )
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 10, left: 10),
+              child: Row(
+                //baris 3
+                children: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.all(3),
+                    child: Container(
+                      //kotak-kotak
+                      height: 50,
+                      width: 50,
+                      decoration: BoxDecoration(
+                          color: Color(0xffFF7216),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black26,
+                              blurRadius: 6.0,
+                              offset: Offset(2, 2),
+                            )
+                          ],
+                          borderRadius: BorderRadius.all(Radius.circular(6)),
+                          border: Border.all(
+                            width: 4,
+                            color: const Color(0xFFFFFFFF),
+                          )),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(3.0),
+                    child: Container(
+                      //kotak-kotak
+                      height: 50,
+                      width: 50,
+                      decoration: BoxDecoration(
+                          color: Color(0xffFF7216),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black26,
+                              blurRadius: 6.0,
+                              offset: Offset(2, 2),
+                            )
+                          ],
+                          borderRadius: BorderRadius.all(Radius.circular(6)),
+                          border: Border.all(
+                            width: 4,
+                            color: const Color(0xFFFFFFFF),
+                          )),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(3.0),
+                    child: Container(
+                      //kotak-kotak
+                      height: 50,
+                      width: 50,
+                      decoration: BoxDecoration(
+                          color: Color(0xffFF7216),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black26,
+                              blurRadius: 6.0,
+                              offset: Offset(2, 2),
+                            )
+                          ],
+                          borderRadius: BorderRadius.all(Radius.circular(6)),
+                          border: Border.all(
+                            width: 4,
+                            color: const Color(0xFFFFFFFF),
+                          )),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(3.0),
+                    child: Container(
+                      //kotak-kotak
+                      height: 50,
+                      width: 50,
+                      decoration: BoxDecoration(
+                          color: Color(0xffFF7216),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black26,
+                              blurRadius: 6.0,
+                              offset: Offset(2, 2),
+                            )
+                          ],
+                          borderRadius: BorderRadius.all(Radius.circular(6)),
+                          border: Border.all(
+                            width: 4,
+                            color: const Color(0xFFFFFFFF),
+                          )),
+                    ),
+                  )
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 10, left: 10),
+              child: Row(
+                //baris 4
+                children: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.all(3),
+                    child: Container(
+                      //kotak-kotak
+                      height: 50,
+                      width: 50,
+                      decoration: BoxDecoration(
+                          color: Color(0xffFF7216),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black26,
+                              blurRadius: 6.0,
+                              offset: Offset(2, 2),
+                            )
+                          ],
+                          borderRadius: BorderRadius.all(Radius.circular(6)),
+                          border: Border.all(
+                            width: 4,
+                            color: const Color(0xFFFFFFFF),
+                          )),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(3.0),
+                    child: Container(
+                      //kotak-kotak
+                      height: 50,
+                      width: 50,
+                      decoration: BoxDecoration(
+                          color: Color(0xffFF7216),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black26,
+                              blurRadius: 6.0,
+                              offset: Offset(2, 2),
+                            )
+                          ],
+                          borderRadius: BorderRadius.all(Radius.circular(6)),
+                          border: Border.all(
+                            width: 4,
+                            color: const Color(0xFFFFFFFF),
+                          )),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(3.0),
+                    child: Container(
+                      //kotak-kotak
+                      height: 50,
+                      width: 50,
+                      decoration: BoxDecoration(
+                          color: Color(0xffFF7216),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black26,
+                              blurRadius: 6.0,
+                              offset: Offset(2, 2),
+                            )
+                          ],
+                          borderRadius: BorderRadius.all(Radius.circular(6)),
+                          border: Border.all(
+                            width: 4,
+                            color: const Color(0xFFFFFFFF),
+                          )),
+                    ),
+                  )
+                ],
+              ),
+            ), //bawahnya
+            Padding(
+              padding: const EdgeInsets.only(top: 90),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: <Widget>[
+                  Container(
+                    //kotak-kotak
+                    height: 54,
+                    width: 54,
+                    decoration: BoxDecoration(
+                      color: Color(0xffFFFFFF),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black26,
+                          blurRadius: 6.0,
+                          offset: Offset(2, 2),
+                        )
+                      ],
+                      borderRadius: BorderRadius.all(Radius.circular(6)),
+                    ),
+                    child: Text('غ',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 40,
+                            fontFamily: 'DUBAI')),
+                  ),
+                ],
+              ),
+            )
+          ],
+        ))
+        
       ]),
     );
   }
