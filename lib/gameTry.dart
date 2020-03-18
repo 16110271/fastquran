@@ -26,14 +26,14 @@ class _GameTryState extends State<GameTry> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xffFF7216),
+        backgroundColor: Color(0xffF57c00),
         title: Text('Game'),
       ),
       body: Stack(children: <Widget>[
         Container(
           height: MediaQuery.of(context).size.height * 0.5,
           width: MediaQuery.of(context).size.width,
-          color: Color(0xffFF7216),
+          color: Color(0xffF57c00),
         ),
         Container(
           child: Column(
@@ -192,9 +192,111 @@ class _GameTryState extends State<GameTry> {
     ));
   }
 
-  static _secondBox() {}
+  static _secondBox() {return Container(
+        child: Column(
+      children: <Widget>[
+        Padding(
+          padding: const EdgeInsets.only(top: 50, left: 10),
+          child: Row(
+            //baris 1
+            children: <Widget>[
+              new WidgetKotak(),
+              new WidgetKotak(),
+              new WidgetKotak(),
+            ],
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(top: 10, left: 10),
+          child: Row(
+            //baris 2
+            children: <Widget>[
+              new WidgetKotak(),
+              new WidgetKotak(),
+              new WidgetKotak(),
+            ],
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(top: 10, left: 10),
+          child: Row(
+            //baris 3
+            children: <Widget>[
+              new WidgetKotak(),
+              new WidgetKotak(),
+              new WidgetKotak(),
+              new WidgetKotak(),
+            ],
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(top: 10, left: 10),
+          child: Row(
+            //baris 4
+            children: <Widget>[
+              new WidgetKotak(),
+              new WidgetKotak(),
+              new WidgetKotak(),
+            ],
+          ),
+        ), //bawahnya
+      ],
+    ));
+  }
 
-  static _thirdBox() {}
+  static _thirdBox() {
+    return Container(
+        child: Column(
+      children: <Widget>[
+        Padding(
+          padding: const EdgeInsets.only(top: 50, left: 10),
+          child: Row(
+            //baris 1
+            children: <Widget>[
+              new WidgetKotak(),
+              new WidgetKotak(),
+              new WidgetKotak(),
+            ],
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(top: 10, left: 10),
+          child: Row(
+            //baris 2
+            children: <Widget>[
+              new WidgetKotak(),
+              new WidgetKotak(),
+              new WidgetKotak(),
+            ],
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(top: 10, left: 10),
+          child: Row(
+            //baris 3
+            children: <Widget>[
+              new WidgetKotak(),
+              new WidgetKotak(),
+              new WidgetKotak(),
+              new WidgetKotak(),
+            ],
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(top: 10, left: 10),
+          child: Row(
+            //baris 4
+            children: <Widget>[
+              new WidgetKotak(),
+              new WidgetKotak(),
+              new WidgetKotak(),
+            ],
+          ),
+        ), //bawahnya
+      ],
+    ));
+  
+  }
 }
 
 class WidgetKotak extends StatelessWidget {
@@ -211,7 +313,7 @@ class WidgetKotak extends StatelessWidget {
         height: 50,
         width: 50,
         decoration: BoxDecoration(
-            color: Color(0xffFF7216),
+            color: Color(0xffF57c00),
             boxShadow: [
               BoxShadow(
                 color: Colors.black26,

@@ -36,14 +36,14 @@ class _DetailAppState extends State<DetailApp> {
   bool kasrah = false;
   bool dhomah = false;
   Color activeColor = Colors.white;
-  Color inactiveColor = Color(0xffFF7216);
+  Color inactiveColor = Colors.black12;
 
   @override
   Widget build(BuildContext context) {
     print(widget.huruf.kategori);
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xffFF7216),
+        backgroundColor: Color(0xffF57c00),
         title: Text(
           "Huruf " + widget.huruf.nama,
           style: TextStyle(fontWeight: FontWeight.bold),
@@ -56,10 +56,10 @@ class _DetailAppState extends State<DetailApp> {
             height: MediaQuery.of(context).size.height * 0.4,
             width: MediaQuery.of(context).size.width,
             decoration: new BoxDecoration(
-                color: Color(0xffFF7216),
+                color: Color(0xffF57c00),
                 borderRadius: new BorderRadius.only(
-                    bottomLeft: const Radius.circular(40.0),
-                    bottomRight: const Radius.circular(40.0))),
+                    bottomLeft: const Radius.circular(20.0),
+                    bottomRight: const Radius.circular(20.0))),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
@@ -77,7 +77,7 @@ class _DetailAppState extends State<DetailApp> {
                         color: fathah ? activeColor : inactiveColor,
                         padding:
                             EdgeInsets.symmetric(vertical: 6, horizontal: 15),
-                        splashColor: Color(0xffFF7216),
+                        splashColor: Color(0xffF57c00),
                         onPressed: () {
                           setState(() {
                             fathah = true;
@@ -94,7 +94,7 @@ class _DetailAppState extends State<DetailApp> {
                         color: kasrah ? activeColor : inactiveColor,
                         padding:
                             EdgeInsets.symmetric(vertical: 6, horizontal: 15),
-                        splashColor: Color(0xffFF7216),
+                        splashColor: Color(0xffF57c00),
                         onPressed: () {
                           setState(() {
                             fathah = false;
@@ -111,7 +111,7 @@ class _DetailAppState extends State<DetailApp> {
                         color: dhomah ? activeColor : inactiveColor,
                         padding:
                             EdgeInsets.symmetric(vertical: 6, horizontal: 15),
-                        splashColor: Color(0xffFF7216),
+                        splashColor: Color(0xffF57c00),
                         onPressed: () {
                           setState(() {
                             fathah = false;
@@ -141,8 +141,8 @@ class _DetailAppState extends State<DetailApp> {
                   children: <Widget>[
                     IconButton(
                         iconSize: 50,
-                        color: Color(0xffFF7216),
-                        splashColor: Color(0xffFF7216),
+                        color: Color(0xffF57c00),
+                        splashColor: Color(0xffF57c00),
                         icon: Icon(Icons.play_arrow),
                         // onPressed: () => audioCache.play(widget.huruf.suaraF)),
                         onPressed: () {
@@ -180,30 +180,7 @@ class _DetailAppState extends State<DetailApp> {
                             textAlign: TextAlign.center)),
                   ]),
                 ),
-                Container(
-                  margin: EdgeInsets.only(top: 25),
-                  child: GestureDetector(
-                    // margin: EdgeInsets.only(top: 40),
-                    child: ClipOval(
-                      child: Material(
-                        color: Color(0xffFF7216), // button color
-                        child: InkWell(
-                          splashColor: Colors.lightBlue, // inkwell color
-                          child: SizedBox(
-                              width: 60,
-                              height: 60,
-                              child: Icon(
-                                Icons.mic,
-                                color: Colors.white,
-                              )),
-                          onLongPress: () {
-                            print('long');
-                          },
-                        ),
-                      ),
-                    ),
-                  ),
-                )
+                
               ],
             ),
           ))

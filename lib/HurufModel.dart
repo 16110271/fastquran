@@ -327,7 +327,7 @@ class _DisplayListViewState extends State {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xffFF7216),
+        backgroundColor: Color(0xffF57c00),
         title: Text(
           "List Huruf",
           style: TextStyle(fontWeight: FontWeight.bold),

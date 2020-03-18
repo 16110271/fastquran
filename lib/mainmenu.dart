@@ -24,7 +24,7 @@ class _MainMenuState extends State<MainMenu> {
                   height: MediaQuery.of(context).size.height * 0.5,
                   width: MediaQuery.of(context).size.width,
                   decoration: new BoxDecoration(
-                      color: Color(0xffFF7216),
+                      color: Color(0xffF57c00),
                       borderRadius: new BorderRadius.only(
                           bottomLeft: const Radius.circular(8.0),
                           bottomRight: const Radius.circular(8.0))),
@@ -77,23 +77,40 @@ class _MainMenuState extends State<MainMenu> {
                               context: context,
                               builder: (BuildContext context) {
                                 return AlertDialog(
-                                  title: Text('FastQuran'),
+                                  //title: Text(
+                                  // 'FastQuran',
+                                  // style:
+                                  //TextStyle(fontWeight: FontWeight.bold),
+                                  // ),
                                   content: SingleChildScrollView(
                                     child: ListBody(
                                       children: <Widget>[
+                                        Padding(
+                                          padding: const EdgeInsets.only(bottom: 20),
+                                          child: Column(
+                                            crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                              mainAxisSize: MainAxisSize.max,
+                                              mainAxisAlignment: MainAxisAlignment.start,
+                                            children: <Widget>[
+                                              Image.asset('image/logo.png',
+                                                  height: 40),
+                                            ],
+                                          ),
+                                        ),
                                         Text(
-                                            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'),
+                                          'Version 1.0 \n2020 © FastQuran',
+                                          style: TextStyle(color: Colors.grey),
+                                        ),
+                                        Text(
+                                            '\nAplikasi pengenalan huruf hijaiyah. Berisi tentang informasi huruf hijaiyah secara detail lengkap dengan cara pengucapan, dan contoh suara pelafalan dengan benar. Terdapat dua menu yaitu Informasi Detail Huruf, dan permainan drag and drop sederhana tentang tempat keluar huruf hijaiyah secara tepat.',
+                                            textAlign: TextAlign.justify),
+                                       // Text('\n2020 © FastQuran',
+                                            //style:
+                                               // TextStyle(color: Colors.grey)),
                                       ],
                                     ),
                                   ),
-                                  actions: <Widget>[
-                                    FlatButton(
-                                      child: Text('Regret'),
-                                      onPressed: () {
-                                        Navigator.of(context).pop();
-                                      },
-                                    ),
-                                  ],
                                 );
                               });
                         })),
@@ -139,7 +156,7 @@ class _MainMenuState extends State<MainMenu> {
                             child: Text("Detail Huruf",
                                 textAlign: TextAlign.left,
                                 style: TextStyle(
-                                    color: Color(0xffFF7216),
+                                    color: Color(0xffF57c00),
                                     fontWeight: FontWeight.bold,
                                     fontSize: 25)),
                           ),
@@ -196,7 +213,7 @@ class _MainMenuState extends State<MainMenu> {
                             child: Text("Makhrajul Huruf",
                                 textAlign: TextAlign.left,
                                 style: TextStyle(
-                                    color: Color(0xffFF7216),
+                                    color: Color(0xffF57c00),
                                     fontWeight: FontWeight.bold,
                                     fontSize: 25)),
                           ),

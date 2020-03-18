@@ -14,7 +14,7 @@ class _GamesState extends State<Game> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xffFF7216),
+        backgroundColor: Color(0xffF57c00),
         title: Text('Game 1'),
       ),
       body: Stack(children: <Widget>[
@@ -23,7 +23,7 @@ class _GamesState extends State<Game> {
             Container(
                 height: MediaQuery.of(context).size.height * 0.5,
                 width: MediaQuery.of(context).size.width,
-                color: Color(0xffFF7216),
+                color: Color(0xffF57c00),
                 child: Image.asset(
                   'image/page_1.png',
                   height: 100,
@@ -46,7 +46,7 @@ class _GamesState extends State<Game> {
                       height: 50,
                       width: 50,
                       decoration: BoxDecoration(
-                          color: Color(0xffFF7216),
+                          color: Color(0xffF57c00),
                           boxShadow: [
                             BoxShadow(
                               color: Colors.black26,
@@ -68,7 +68,7 @@ class _GamesState extends State<Game> {
                       height: 50,
                       width: 50,
                       decoration: BoxDecoration(
-                          color: Color(0xffFF7216),
+                          color: Color(0xffF57c00),
                           boxShadow: [
                             BoxShadow(
                               color: Colors.black26,
@@ -90,7 +90,7 @@ class _GamesState extends State<Game> {
                       height: 50,
                       width: 50,
                       decoration: BoxDecoration(
-                          color: Color(0xffFF7216),
+                          color: Color(0xffF57c00),
                           boxShadow: [
                             BoxShadow(
                               color: Colors.black26,
@@ -120,7 +120,7 @@ class _GamesState extends State<Game> {
                       height: 50,
                       width: 50,
                       decoration: BoxDecoration(
-                          color: Color(0xffFF7216),
+                          color: Color(0xffF57c00),
                           boxShadow: [
                             BoxShadow(
                               color: Colors.black26,
@@ -142,7 +142,7 @@ class _GamesState extends State<Game> {
                       height: 50,
                       width: 50,
                       decoration: BoxDecoration(
-                          color: Color(0xffFF7216),
+                          color: Color(0xffF57c00),
                           boxShadow: [
                             BoxShadow(
                               color: Colors.black26,
@@ -164,7 +164,7 @@ class _GamesState extends State<Game> {
                       height: 50,
                       width: 50,
                       decoration: BoxDecoration(
-                          color: Color(0xffFF7216),
+                          color: Color(0xffF57c00),
                           boxShadow: [
                             BoxShadow(
                               color: Colors.black26,
@@ -194,7 +194,7 @@ class _GamesState extends State<Game> {
                       height: 50,
                       width: 50,
                       decoration: BoxDecoration(
-                          color: Color(0xffFF7216),
+                          color: Color(0xffF57c00),
                           boxShadow: [
                             BoxShadow(
                               color: Colors.black26,
@@ -216,7 +216,7 @@ class _GamesState extends State<Game> {
                       height: 50,
                       width: 50,
                       decoration: BoxDecoration(
-                          color: Color(0xffFF7216),
+                          color: Color(0xffF57c00),
                           boxShadow: [
                             BoxShadow(
                               color: Colors.black26,
@@ -238,7 +238,7 @@ class _GamesState extends State<Game> {
                       height: 50,
                       width: 50,
                       decoration: BoxDecoration(
-                          color: Color(0xffFF7216),
+                          color: Color(0xffF57c00),
                           boxShadow: [
                             BoxShadow(
                               color: Colors.black26,
@@ -260,7 +260,7 @@ class _GamesState extends State<Game> {
                       height: 50,
                       width: 50,
                       decoration: BoxDecoration(
-                          color: Color(0xffFF7216),
+                          color: Color(0xffF57c00),
                           boxShadow: [
                             BoxShadow(
                               color: Colors.black26,
@@ -290,7 +290,7 @@ class _GamesState extends State<Game> {
                       height: 50,
                       width: 50,
                       decoration: BoxDecoration(
-                          color: Color(0xffFF7216),
+                          color: Color(0xffF57c00),
                           boxShadow: [
                             BoxShadow(
                               color: Colors.black26,
@@ -312,7 +312,7 @@ class _GamesState extends State<Game> {
                       height: 50,
                       width: 50,
                       decoration: BoxDecoration(
-                          color: Color(0xffFF7216),
+                          color: Color(0xffF57c00),
                           boxShadow: [
                             BoxShadow(
                               color: Colors.black26,
@@ -334,7 +334,7 @@ class _GamesState extends State<Game> {
                       height: 50,
                       width: 50,
                       decoration: BoxDecoration(
-                          color: Color(0xffFF7216),
+                          color: Color(0xffF57c00),
                           boxShadow: [
                             BoxShadow(
                               color: Colors.black26,
