@@ -226,49 +226,43 @@ class _GameTryState extends State<GameTry> {
       children: <Widget>[
         Padding(
           padding: const EdgeInsets.only(top: 50, left: 10),
-          child: Row(
-            //baris 1
-            children: <Widget>[
-              new WidgetKotak(),
-              new WidgetKotak(),
-              new WidgetKotak(),
-            ],
+          child: Padding(
+            padding: const EdgeInsets.only(left: 55),
+            child: Row(
+              //baris 1
+              children: <Widget>[
+                // new WidgetKotak(),
+                new WidgetKotak(),
+                new WidgetKotak(),
+                new WidgetKotak(),
+              ],
+            ),
           ),
         ),
         Padding(
           padding: const EdgeInsets.only(top: 10, left: 10),
-          child: Row(
-            //baris 2
-            children: <Widget>[
-              new WidgetKotak(),
-              new WidgetKotak(),
-              new WidgetKotak(),
-            ],
+          child: Padding(
+            padding: const EdgeInsets.only(left: 110),
+            child: Row(
+              //baris 2
+              children: <Widget>[
+                new WidgetKotak(),
+                new WidgetKotak(),
+                new WidgetKotak(),
+              ],
+            ),
           ),
         ),
         Padding(
           padding: const EdgeInsets.only(top: 10, left: 10),
-          child: Row(
-            //baris 3
-            children: <Widget>[
-              new WidgetKotak(),
-              new WidgetKotak(),
-              new WidgetKotak(),
-              new WidgetKotak(),
-            ],
+          child: Padding(
+            padding: const EdgeInsets.only(left: 220),
+            child: Row(
+              //baris 3
+              children: <Widget>[new WidgetKotak()],
+            ),
           ),
         ),
-        Padding(
-          padding: const EdgeInsets.only(top: 10, left: 10),
-          child: Row(
-            //baris 4
-            children: <Widget>[
-              new WidgetKotak(),
-              new WidgetKotak(),
-              new WidgetKotak(),
-            ],
-          ),
-        ), //bawahnya
       ],
     ));
   }
@@ -278,45 +272,48 @@ class _GameTryState extends State<GameTry> {
         child: Column(
       children: <Widget>[
         Padding(
-          padding: const EdgeInsets.only(top: 50, left: 10),
+          padding: const EdgeInsets.only(top: 50, right: 10),
           child: Row(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            mainAxisAlignment: MainAxisAlignment.end,
             //baris 1
             children: <Widget>[
               new WidgetKotak(),
               new WidgetKotak(),
-              new WidgetKotak(),
             ],
           ),
         ),
         Padding(
-          padding: const EdgeInsets.only(top: 10, left: 10),
+          padding: const EdgeInsets.only(top: 10, right: 10),
           child: Row(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            mainAxisAlignment: MainAxisAlignment.end,
             //baris 2
             children: <Widget>[
               new WidgetKotak(),
               new WidgetKotak(),
-              new WidgetKotak(),
             ],
           ),
         ),
         Padding(
-          padding: const EdgeInsets.only(top: 10, left: 10),
+          padding: const EdgeInsets.only(top: 10, right: 10),
           child: Row(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            mainAxisAlignment: MainAxisAlignment.end,
             //baris 3
             children: <Widget>[
               new WidgetKotak(),
               new WidgetKotak(),
-              new WidgetKotak(),
-              new WidgetKotak(),
             ],
           ),
         ),
         Padding(
-          padding: const EdgeInsets.only(top: 10, left: 10),
+          padding: const EdgeInsets.only(top: 10, right: 10),
           child: Row(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            mainAxisAlignment: MainAxisAlignment.end,
             //baris 4
             children: <Widget>[
-              new WidgetKotak(),
               new WidgetKotak(),
               new WidgetKotak(),
             ],
