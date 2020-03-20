@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'HurufModel.dart';
 
 class GameTry extends StatefulWidget {
   @override
@@ -47,7 +48,23 @@ class _GameTryState extends State<GameTry> {
               SizedBox(
                 height: 20.0,
               ),
-              tombolHijaiyah()
+              // Row(
+              //     crossAxisAlignment: CrossAxisAlignment.end,
+              //     mainAxisAlignment: MainAxisAlignment.end,
+              //     children: <Widget>[
+              //       Container(
+              //           child: new GridView.builder(
+              //               itemCount: 5,
+              //               gridDelegate:
+              //                   new SliverGridDelegateWithFixedCrossAxisCount(
+              //                       crossAxisCount: 3),
+              //               itemBuilder: (BuildContext context, int index) {
+              //                 return new Container(
+              //                     alignment: Alignment.center,
+              //                     child: new Text('Item $index'),
+              //                   );
+              //               }))
+              //     ])
             ],
           ),
         ),
@@ -107,36 +124,47 @@ class _GameTryState extends State<GameTry> {
     );
   }
 
-  Padding tombolHijaiyah() {
-    return Padding(
-      padding: const EdgeInsets.only(top: 90),
-      child: Row(
+  Row tombolHijaiyah() {
+    return Row(
         crossAxisAlignment: CrossAxisAlignment.end,
         mainAxisAlignment: MainAxisAlignment.end,
         children: <Widget>[
           Container(
-            //kotak-kotak
-            height: 54,
-            width: 54,
-            decoration: BoxDecoration(
-              color: Color(0xffFFFFFF),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black26,
-                  blurRadius: 6.0,
-                  offset: Offset(2, 2),
-                )
-              ],
-              borderRadius: BorderRadius.all(Radius.circular(6)),
-            ),
-            child: Text('غ',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                    color: Colors.black, fontSize: 40, fontFamily: 'DUBAI')),
-          ),
-        ],
-      ),
-    );
+              child: new GridView.builder(
+                  itemCount: 5,
+                  gridDelegate: new SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 3),
+                  itemBuilder: (BuildContext context, int index) {
+                    return new GestureDetector(
+                      child: new Container(
+                        alignment: Alignment.center,
+                        child: new Text('Item $index'),
+                      ),
+                    );
+                  }))
+        ]);
+    // Container(
+    //   //kotak-kotak
+    //   height: 54,
+    //   width: 54,
+    //   decoration: BoxDecoration(
+    //     color: Color(0xffFFFFFF),
+    //     boxShadow: [
+    //       BoxShadow(
+    //         color: Colors.black26,
+    //         blurRadius: 6.0,
+    //         offset: Offset(2, 2),
+    //       )
+    //     ],
+    //     borderRadius: BorderRadius.all(Radius.circular(6)),
+    //   ),
+    //   child: Text('غ',
+    //       textAlign: TextAlign.center,
+    //       style: TextStyle(
+    //           color: Colors.black, fontSize: 40, fontFamily: 'DUBAI')),
+    // ),
+    //   ],
+    // );
   }
 
   static _firstBox() {
@@ -192,7 +220,8 @@ class _GameTryState extends State<GameTry> {
     ));
   }
 
-  static _secondBox() {return Container(
+  static _secondBox() {
+    return Container(
         child: Column(
       children: <Widget>[
         Padding(
@@ -295,7 +324,6 @@ class _GameTryState extends State<GameTry> {
         ), //bawahnya
       ],
     ));
-  
   }
 }
 
