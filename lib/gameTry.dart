@@ -401,6 +401,11 @@ class _GameTryState extends State<GameTry> {
             if (data == hurufHijaiyah) {
               setState(() {
                 targetHuruf[hurufHijaiyah] = true;
+
+                //untuk reset tombol
+                // for (int i = 1; i < 30; i++) {
+                // targetHuruf[i] = false;
+                // }
               });
               scaffoldKey.currentState.showSnackBar(SnackBar(
                 content: Text("Correct!"),
