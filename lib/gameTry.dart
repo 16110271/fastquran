@@ -10,9 +10,9 @@ class GameTry extends StatefulWidget {
 class _GameTryState extends State<GameTry> {
   int _current = 0;
   List<List> imgList = [
-    ['image/aa.jpg', _firstBox()],
-    ['image/bb.jpg', _secondBox()],
-    ['image/cc.jpg', _thirdBox()],
+    ['image/aa.jpg', 1],
+    ['image/bb.jpg', 2],
+    ['image/cc.jpg', 3],
   ];
 
   List<T> map<T>(List list, Function handler) {
@@ -23,9 +23,16 @@ class _GameTryState extends State<GameTry> {
     return result;
   }
 
+  GlobalKey<ScaffoldState> scaffoldKey = new GlobalKey();
+  Map targetHuruf = {
+    1: false,
+    2: false,
+    3: false,
+  };
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: scaffoldKey,
       appBar: AppBar(
         backgroundColor: Color(0xffF57c00),
         title: Text('Game'),
@@ -37,7 +44,7 @@ class _GameTryState extends State<GameTry> {
           color: Color(0xffF57c00),
         ),
         Container(
-          child: Column(
+          child: ListView(
             children: <Widget>[
               Container(),
               sliderBox(context),
@@ -48,6 +55,8 @@ class _GameTryState extends State<GameTry> {
               SizedBox(
                 height: 20.0,
               ),
+              tombolHijaiyah(),
+
               // Row(
               //     crossAxisAlignment: CrossAxisAlignment.end,
               //     mainAxisAlignment: MainAxisAlignment.end,
@@ -106,6 +115,15 @@ class _GameTryState extends State<GameTry> {
         });
       },
       items: imgList.map((img) {
+        if (img[1] == 1) {
+          //_firstBox()
+        } else {
+          if (img[1] == 2) {
+            //_secondBox
+          } else {
+            //_thirdBox
+          }
+        }
         return Builder(
           builder: (BuildContext context) {
             return Stack(
@@ -115,7 +133,9 @@ class _GameTryState extends State<GameTry> {
                   width: MediaQuery.of(context).size.width,
                   child: Image.asset(img[0], fit: BoxFit.cover),
                 ),
-                img[1],
+                img[1] == 1
+                    ? _firstBox()
+                    : img[1] == 2 ? _secondBox() : _thirdBox(),
               ],
             );
           },
@@ -129,19 +149,18 @@ class _GameTryState extends State<GameTry> {
         crossAxisAlignment: CrossAxisAlignment.end,
         mainAxisAlignment: MainAxisAlignment.end,
         children: <Widget>[
-          Container(
-              child: new GridView.builder(
-                  itemCount: 5,
-                  gridDelegate: new SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 3),
-                  itemBuilder: (BuildContext context, int index) {
-                    return new GestureDetector(
-                      child: new Container(
-                        alignment: Alignment.center,
-                        child: new Text('Item $index'),
-                      ),
-                    );
-                  }))
+          Draggable(
+            data: 1,
+            child: targetHuruf[1] == false ? dragableBox('1') : Container(),
+            feedback: dragableBox('1'),
+            childWhenDragging: Container(),
+          ),
+          Draggable(
+            data: 2,
+            child: targetHuruf[2] == false ? dragableBox('2') : Container(),
+            feedback: dragableBox('2'),
+            childWhenDragging: Container(),
+          ),
         ]);
     // Container(
     //   //kotak-kotak
@@ -167,7 +186,30 @@ class _GameTryState extends State<GameTry> {
     // );
   }
 
-  static _firstBox() {
+  Container dragableBox(String huruf) {
+    return Container(
+      //kotak-kotak
+      height: 54,
+      width: 54,
+      decoration: BoxDecoration(
+        color: Color(0xffFFFFFF),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black26,
+            blurRadius: 6.0,
+            offset: Offset(2, 2),
+          )
+        ],
+        borderRadius: BorderRadius.all(Radius.circular(6)),
+      ),
+      child: Text(huruf,
+          textAlign: TextAlign.center,
+          style: TextStyle(
+              color: Colors.black, fontSize: 40, fontFamily: 'DUBAI')),
+    );
+  }
+
+  _firstBox() {
     return Container(
         child: Column(
       children: <Widget>[
@@ -176,9 +218,9 @@ class _GameTryState extends State<GameTry> {
           child: Row(
             //baris 1
             children: <Widget>[
-              new WidgetKotak(),
-              new WidgetKotak(),
-              new WidgetKotak(),
+              targetHuruf[1] == false ? widgetKotak(1) : dragableBox('1'),
+              targetHuruf[2] == false ? widgetKotak(2) : dragableBox('2'),
+              targetHuruf[3] == false ? widgetKotak(3) : dragableBox('3'),
             ],
           ),
         ),
@@ -187,9 +229,9 @@ class _GameTryState extends State<GameTry> {
           child: Row(
             //baris 2
             children: <Widget>[
-              new WidgetKotak(),
-              new WidgetKotak(),
-              new WidgetKotak(),
+              widgetKotak(1),
+              widgetKotak(1),
+              widgetKotak(1),
             ],
           ),
         ),
@@ -198,10 +240,10 @@ class _GameTryState extends State<GameTry> {
           child: Row(
             //baris 3
             children: <Widget>[
-              new WidgetKotak(),
-              new WidgetKotak(),
-              new WidgetKotak(),
-              new WidgetKotak(),
+              widgetKotak(1),
+              widgetKotak(1),
+              widgetKotak(1),
+              widgetKotak(1),
             ],
           ),
         ),
@@ -210,9 +252,9 @@ class _GameTryState extends State<GameTry> {
           child: Row(
             //baris 4
             children: <Widget>[
-              new WidgetKotak(),
-              new WidgetKotak(),
-              new WidgetKotak(),
+              widgetKotak(1),
+              widgetKotak(1),
+              widgetKotak(1),
             ],
           ),
         ), //bawahnya
@@ -220,7 +262,7 @@ class _GameTryState extends State<GameTry> {
     ));
   }
 
-  static _secondBox() {
+  _secondBox() {
     return Container(
         child: Column(
       children: <Widget>[
@@ -231,10 +273,10 @@ class _GameTryState extends State<GameTry> {
             child: Row(
               //baris 1
               children: <Widget>[
-                // new WidgetKotak(),
-                new WidgetKotak(),
-                new WidgetKotak(),
-                new WidgetKotak(),
+                // widgetKotak(1),
+                widgetKotak(1),
+                widgetKotak(1),
+                widgetKotak(1),
               ],
             ),
           ),
@@ -246,9 +288,9 @@ class _GameTryState extends State<GameTry> {
             child: Row(
               //baris 2
               children: <Widget>[
-                new WidgetKotak(),
-                new WidgetKotak(),
-                new WidgetKotak(),
+                widgetKotak(1),
+                widgetKotak(1),
+                widgetKotak(1),
               ],
             ),
           ),
@@ -259,7 +301,7 @@ class _GameTryState extends State<GameTry> {
             padding: const EdgeInsets.only(left: 220),
             child: Row(
               //baris 3
-              children: <Widget>[new WidgetKotak()],
+              children: <Widget>[widgetKotak(1)],
             ),
           ),
         ),
@@ -267,7 +309,7 @@ class _GameTryState extends State<GameTry> {
     ));
   }
 
-  static _thirdBox() {
+  _thirdBox() {
     return Container(
         child: Column(
       children: <Widget>[
@@ -278,8 +320,8 @@ class _GameTryState extends State<GameTry> {
             mainAxisAlignment: MainAxisAlignment.end,
             //baris 1
             children: <Widget>[
-              new WidgetKotak(),
-              new WidgetKotak(),
+              widgetKotak(1),
+              widgetKotak(1),
             ],
           ),
         ),
@@ -290,8 +332,8 @@ class _GameTryState extends State<GameTry> {
             mainAxisAlignment: MainAxisAlignment.end,
             //baris 2
             children: <Widget>[
-              new WidgetKotak(),
-              new WidgetKotak(),
+              widgetKotak(1),
+              widgetKotak(1),
             ],
           ),
         ),
@@ -302,8 +344,8 @@ class _GameTryState extends State<GameTry> {
             mainAxisAlignment: MainAxisAlignment.end,
             //baris 3
             children: <Widget>[
-              new WidgetKotak(),
-              new WidgetKotak(),
+              widgetKotak(1),
+              widgetKotak(1),
             ],
           ),
         ),
@@ -314,23 +356,16 @@ class _GameTryState extends State<GameTry> {
             mainAxisAlignment: MainAxisAlignment.end,
             //baris 4
             children: <Widget>[
-              new WidgetKotak(),
-              new WidgetKotak(),
+              widgetKotak(1),
+              widgetKotak(1),
             ],
           ),
         ), //bawahnya
       ],
     ));
   }
-}
 
-class WidgetKotak extends StatelessWidget {
-  const WidgetKotak({
-    Key key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
+  widgetKotak(int hurufHijaiyah) {
     return Padding(
       padding: const EdgeInsets.all(3),
       child: Container(
@@ -351,6 +386,34 @@ class WidgetKotak extends StatelessWidget {
               width: 4,
               color: const Color(0xFFFFFFFF),
             )),
+        child: DragTarget(
+          builder: (context, List<int> candidateData, rejectedData) {
+            return Center(
+                child: Text(
+              hurufHijaiyah.toString(),
+              style: TextStyle(color: Colors.white, fontSize: 22.0),
+            ));
+          },
+          onWillAccept: (data) {
+            return true;
+          },
+          onAccept: (data) {
+            if (data == hurufHijaiyah) {
+              setState(() {
+                targetHuruf[hurufHijaiyah] = true;
+              });
+              scaffoldKey.currentState.showSnackBar(SnackBar(
+                content: Text("Correct!"),
+                duration: Duration(milliseconds: 500),
+              ));
+            } else {
+              scaffoldKey.currentState.showSnackBar(SnackBar(
+                content: Text("False!"),
+                duration: Duration(milliseconds: 500),
+              ));
+            }
+          },
+        ),
       ),
     );
   }
