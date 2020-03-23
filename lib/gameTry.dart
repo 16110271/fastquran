@@ -1,6 +1,5 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'HurufModel.dart';
 
 class GameTry extends StatefulWidget {
   @override
@@ -56,24 +55,6 @@ class _GameTryState extends State<GameTry> {
                 height: 20.0,
               ),
               tombolHijaiyah(),
-
-              // Row(
-              //     crossAxisAlignment: CrossAxisAlignment.end,
-              //     mainAxisAlignment: MainAxisAlignment.end,
-              //     children: <Widget>[
-              //       Container(
-              //           child: new GridView.builder(
-              //               itemCount: 5,
-              //               gridDelegate:
-              //                   new SliverGridDelegateWithFixedCrossAxisCount(
-              //                       crossAxisCount: 3),
-              //               itemBuilder: (BuildContext context, int index) {
-              //                 return new Container(
-              //                     alignment: Alignment.center,
-              //                     child: new Text('Item $index'),
-              //                   );
-              //               }))
-              //     ])
             ],
           ),
         ),
@@ -146,66 +127,239 @@ class _GameTryState extends State<GameTry> {
 
   Row tombolHijaiyah() {
     return Row(
-        crossAxisAlignment: CrossAxisAlignment.end,
-        mainAxisAlignment: MainAxisAlignment.end,
-        children: <Widget>[
-          Draggable(
-            data: 1,
-            child: targetHuruf[1] == false ? dragableBox('1') : Container(),
-            feedback: dragableBox('1'),
-            childWhenDragging: Container(),
-          ),
-          Draggable(
-            data: 2,
-            child: targetHuruf[2] == false ? dragableBox('2') : Container(),
-            feedback: dragableBox('2'),
-            childWhenDragging: Container(),
-          ),
-        ]);
-    // Container(
-    //   //kotak-kotak
-    //   height: 54,
-    //   width: 54,
-    //   decoration: BoxDecoration(
-    //     color: Color(0xffFFFFFF),
-    //     boxShadow: [
-    //       BoxShadow(
-    //         color: Colors.black26,
-    //         blurRadius: 6.0,
-    //         offset: Offset(2, 2),
-    //       )
-    //     ],
-    //     borderRadius: BorderRadius.all(Radius.circular(6)),
-    //   ),
-    //   child: Text('غ',
-    //       textAlign: TextAlign.center,
-    //       style: TextStyle(
-    //           color: Colors.black, fontSize: 40, fontFamily: 'DUBAI')),
-    // ),
-    //   ],
-    // );
+      children: <Widget>[
+        Column(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: <Widget>[
+              Row(
+                children: <Widget>[
+                  Draggable(
+                    data: 1,
+                    child: targetHuruf[1] == false ? dragableBox('1') : Container(),
+                    feedback: dragableBox('1'),
+                    childWhenDragging: Container(),
+                  ),
+                  Draggable(
+                    data: 2,
+                    child: targetHuruf[2] == false ? dragableBox('2') : Container(),
+                    feedback: dragableBox('2'),
+                    childWhenDragging: Container(),
+                  ),
+                  Draggable(
+                    data: 1,
+                    child: targetHuruf[1] == false ? dragableBox('1') : Container(),
+                    feedback: dragableBox('1'),
+                    childWhenDragging: Container(),
+                  ),
+                  Draggable(
+                    data: 2,
+                    child: targetHuruf[2] == false ? dragableBox('2') : Container(),
+                    feedback: dragableBox('2'),
+                    childWhenDragging: Container(),
+                  ),
+                  Draggable(
+                    data: 1,
+                    child: targetHuruf[1] == false ? dragableBox('1') : Container(),
+                    feedback: dragableBox('1'),
+                    childWhenDragging: Container(),
+                  ),
+                  Draggable(
+                    data: 2,
+                    child: targetHuruf[2] == false ? dragableBox('2') : Container(),
+                    feedback: dragableBox('2'),
+                    childWhenDragging: Container(),
+                  ),
+                ],
+              ),
+              Row(
+                children: <Widget>[
+                  Draggable(
+                    data: 1,
+                    child: targetHuruf[1] == false ? dragableBox('ا') : Container(),
+                    feedback: dragableBox('ا'),
+                    childWhenDragging: Container(),
+                  ),
+                  Draggable(
+                    data: 2,
+                    child: targetHuruf[2] == false ? dragableBox('ب') : Container(),
+                    feedback: dragableBox('ب'),
+                    childWhenDragging: Container(),
+                  ),
+                  Draggable(
+                    data: 1,
+                    child: targetHuruf[1] == false ? dragableBox('ث') : Container(),
+                    feedback: dragableBox('ث'),
+                    childWhenDragging: Container(),
+                  ),
+                  Draggable(
+                    data: 2,
+                    child: targetHuruf[2] == false ? dragableBox('ج') : Container(),
+                    feedback: dragableBox('ج'),
+                    childWhenDragging: Container(),
+                  ),
+                  Draggable(
+                    data: 1,
+                    child: targetHuruf[1] == false ? dragableBox('ج') : Container(),
+                    feedback: dragableBox('ج'),
+                    childWhenDragging: Container(),
+                  ),
+                  Draggable(
+                    data: 2,
+                    child: targetHuruf[2] == false ? dragableBox('2') : Container(),
+                    feedback: dragableBox('2'),
+                    childWhenDragging: Container(),
+                  ),
+                ],
+              ),
+              Row(
+                children: <Widget>[
+                  Draggable(
+                    data: 1,
+                    child: targetHuruf[1] == false ? dragableBox('1') : Container(),
+                    feedback: dragableBox('1'),
+                    childWhenDragging: Container(),
+                  ),
+                  Draggable(
+                    data: 2,
+                    child: targetHuruf[2] == false ? dragableBox('2') : Container(),
+                    feedback: dragableBox('2'),
+                    childWhenDragging: Container(),
+                  ),
+                  Draggable(
+                    data: 1,
+                    child: targetHuruf[1] == false ? dragableBox('1') : Container(),
+                    feedback: dragableBox('1'),
+                    childWhenDragging: Container(),
+                  ),
+                  Draggable(
+                    data: 2,
+                    child: targetHuruf[2] == false ? dragableBox('2') : Container(),
+                    feedback: dragableBox('2'),
+                    childWhenDragging: Container(),
+                  ),
+                  Draggable(
+                    data: 1,
+                    child: targetHuruf[1] == false ? dragableBox('1') : Container(),
+                    feedback: dragableBox('1'),
+                    childWhenDragging: Container(),
+                  ),
+                  Draggable(
+                    data: 2,
+                    child: targetHuruf[2] == false ? dragableBox('2') : Container(),
+                    feedback: dragableBox('2'),
+                    childWhenDragging: Container(),
+                  ),
+                ],
+              ),
+              Row(
+                children: <Widget>[
+                  Draggable(
+                    data: 1,
+                    child: targetHuruf[1] == false ? dragableBox('1') : Container(),
+                    feedback: dragableBox('1'),
+                    childWhenDragging: Container(),
+                  ),
+                  Draggable(
+                    data: 2,
+                    child: targetHuruf[2] == false ? dragableBox('2') : Container(),
+                    feedback: dragableBox('2'),
+                    childWhenDragging: Container(),
+                  ),
+                  Draggable(
+                    data: 1,
+                    child: targetHuruf[1] == false ? dragableBox('1') : Container(),
+                    feedback: dragableBox('1'),
+                    childWhenDragging: Container(),
+                  ),
+                  Draggable(
+                    data: 2,
+                    child: targetHuruf[2] == false ? dragableBox('2') : Container(),
+                    feedback: dragableBox('2'),
+                    childWhenDragging: Container(),
+                  ),
+                  Draggable(
+                    data: 1,
+                    child: targetHuruf[1] == false ? dragableBox('1') : Container(),
+                    feedback: dragableBox('1'),
+                    childWhenDragging: Container(),
+                  ),
+                  Draggable(
+                    data: 2,
+                    child: targetHuruf[2] == false ? dragableBox('2') : Container(),
+                    feedback: dragableBox('2'),
+                    childWhenDragging: Container(),
+                  ),
+                ],
+              ),
+              Row(
+                children: <Widget>[
+                  Draggable(
+                    data: 1,
+                    child: targetHuruf[1] == false ? dragableBox('1') : Container(),
+                    feedback: dragableBox('1'),
+                    childWhenDragging: Container(),
+                  ),
+                  Draggable(
+                    data: 2,
+                    child: targetHuruf[2] == false ? dragableBox('2') : Container(),
+                    feedback: dragableBox('2'),
+                    childWhenDragging: Container(),
+                  ),
+                  Draggable(
+                    data: 1,
+                    child: targetHuruf[1] == false ? dragableBox('1') : Container(),
+                    feedback: dragableBox('1'),
+                    childWhenDragging: Container(),
+                  ),
+                  Draggable(
+                    data: 2,
+                    child: targetHuruf[2] == false ? dragableBox('2') : Container(),
+                    feedback: dragableBox('2'),
+                    childWhenDragging: Container(),
+                  ),
+                  Draggable(
+                    data: 1,
+                    child: targetHuruf[1] == false ? dragableBox('1') : Container(),
+                    feedback: dragableBox('1'),
+                    childWhenDragging: Container(),
+                  ),
+                  Draggable(
+                    data: 2,
+                    child: targetHuruf[2] == false ? dragableBox('2') : Container(),
+                    feedback: dragableBox('2'),
+                    childWhenDragging: Container(),
+                  ),
+                ],
+              ),
+            ]),
+      ],
+    );
   }
 
-  Container dragableBox(String huruf) {
-    return Container(
-      //kotak-kotak
-      height: 54,
-      width: 54,
-      decoration: BoxDecoration(
-        color: Color(0xffFFFFFF),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black26,
-            blurRadius: 6.0,
-            offset: Offset(2, 2),
-          )
-        ],
-        borderRadius: BorderRadius.all(Radius.circular(6)),
+  Padding dragableBox(String huruf) {
+    return Padding(
+      padding: const EdgeInsets.all(3),
+      child: Container(
+        //kotak-kotak
+        height: 50,
+        width: 50,
+        decoration: BoxDecoration(
+          color: Color(0xffFFFFFF),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black26,
+              blurRadius: 6.0,
+              offset: Offset(2, 2),
+            )
+          ],
+          borderRadius: BorderRadius.all(Radius.circular(6)),
+        ),
+        child: Text(huruf,
+            textAlign: TextAlign.center,
+            style: TextStyle(
+                color: Colors.black, fontSize: 30, fontFamily: 'DUBAI')),
       ),
-      child: Text(huruf,
-          textAlign: TextAlign.center,
-          style: TextStyle(
-              color: Colors.black, fontSize: 40, fontFamily: 'DUBAI')),
     );
   }
 
@@ -218,7 +372,7 @@ class _GameTryState extends State<GameTry> {
           child: Row(
             //baris 1
             children: <Widget>[
-              targetHuruf[1] == false ? widgetKotak(1) : dragableBox('1'),
+              targetHuruf[1] == false ? widgetKotak(1) : dragableBox('ا'),
               targetHuruf[2] == false ? widgetKotak(2) : dragableBox('2'),
               targetHuruf[3] == false ? widgetKotak(3) : dragableBox('3'),
             ],
