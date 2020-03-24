@@ -1,5 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:audioplayers/audio_cache.dart';
+import 'package:audioplayers/audioplayers.dart';
 
 class GameTry extends StatefulWidget {
   @override
@@ -7,6 +9,22 @@ class GameTry extends StatefulWidget {
 }
 
 class _GameTryState extends State<GameTry> {
+  AudioPlayer advancedPlayer;
+  AudioCache audioCache;
+
+  String resultText = "";
+
+  @override
+  void initState() {
+    super.initState();
+    initPlayer();
+  }
+
+  void initPlayer() {
+    advancedPlayer = new AudioPlayer();
+    audioCache = new AudioCache(fixedPlayer: advancedPlayer);
+  }
+
   int _current = 0;
   List<List> imgList = [
     ['image/aa.jpg', 1],
@@ -223,46 +241,42 @@ class _GameTryState extends State<GameTry> {
                 Draggable(
                   data: 6,
                   child:
-                      targetHuruf[1] == false ? dragableBox('ح') : Container(),
+                      targetHuruf[6] == false ? dragableBox('ح') : dragKosong(),
                   feedback: dragableBox('ح'),
-                  childWhenDragging: Container(),
+                  childWhenDragging: dragKosong(),
                 ),
                 Draggable(
                   data: 5,
                   child:
-                      targetHuruf[2] == false ? dragableBox('ج') : Container(),
+                      targetHuruf[5] == false ? dragableBox('ج') : dragKosong(),
                   feedback: dragableBox('ج'),
-                  childWhenDragging: Container(),
+                  childWhenDragging: dragKosong(),
                 ),
                 Draggable(
                   data: 4,
                   child:
-                      targetHuruf[1] == false ? dragableBox('ث') : Container(),
+                      targetHuruf[4] == false ? dragableBox('ث') : dragKosong(),
                   feedback: dragableBox('ث'),
-                  childWhenDragging: Container(),
+                  childWhenDragging: dragKosong(),
                 ),
                 Draggable(
                   data: 3,
                   child:
-                      targetHuruf[2] == false ? dragableBox('ت') : Container(),
+                      targetHuruf[3] == false ? dragableBox('ت') : dragKosong(),
                   feedback: dragableBox('ت'),
-                  childWhenDragging: Container(),
+                  childWhenDragging: dragKosong(),
                 ),
                 Draggable(
                   data: 2,
                   child:
-                      targetHuruf[1] == false ? dragableBox('ب') : Container(),
+                      targetHuruf[2] == false ? dragableBox('ب') : dragKosong(),
                   feedback: dragableBox('ب'),
-                  childWhenDragging: Container(),
+                  childWhenDragging: dragKosong(),
                 ),
                 Draggable(
                   data: 1,
-                  child: targetHuruf[2] == false
-                      ? dragableBox('ا')
-                      : Container(
-                          height: 50,
-                          width: 50,
-                        ),
+                  child:
+                      targetHuruf[1] == false ? dragableBox('ا') : dragKosong(),
                   feedback: dragableBox('ا'),
                   childWhenDragging: Padding(
                     padding: const EdgeInsets.all(7),
@@ -281,45 +295,48 @@ class _GameTryState extends State<GameTry> {
               children: <Widget>[
                 Draggable(
                   data: 12,
-                  child:
-                      targetHuruf[1] == false ? dragableBox('س') : Container(),
+                  child: targetHuruf[12] == false
+                      ? dragableBox('س')
+                      : dragKosong(),
                   feedback: dragableBox('س'),
-                  childWhenDragging: Container(),
+                  childWhenDragging: dragKosong(),
                 ),
                 Draggable(
                   data: 11,
-                  child:
-                      targetHuruf[1] == false ? dragableBox('ز') : Container(),
+                  child: targetHuruf[11] == false
+                      ? dragableBox('ز')
+                      : dragKosong(),
                   feedback: dragableBox('ز'),
-                  childWhenDragging: Container(),
+                  childWhenDragging: dragKosong(),
                 ),
                 Draggable(
                   data: 10,
-                  child:
-                      targetHuruf[2] == false ? dragableBox('ر') : Container(),
+                  child: targetHuruf[10] == false
+                      ? dragableBox('ر')
+                      : dragKosong(),
                   feedback: dragableBox('ر'),
-                  childWhenDragging: Container(),
+                  childWhenDragging: dragKosong(),
                 ),
                 Draggable(
                   data: 9,
                   child:
-                      targetHuruf[2] == false ? dragableBox('ذ') : Container(),
+                      targetHuruf[9] == false ? dragableBox('ذ') : dragKosong(),
                   feedback: dragableBox('ذ'),
-                  childWhenDragging: Container(),
+                  childWhenDragging: dragKosong(),
                 ),
                 Draggable(
                   data: 8,
                   child:
-                      targetHuruf[1] == false ? dragableBox('د') : Container(),
+                      targetHuruf[8] == false ? dragableBox('د') : dragKosong(),
                   feedback: dragableBox('د'),
-                  childWhenDragging: Container(),
+                  childWhenDragging: dragKosong(),
                 ),
                 Draggable(
                   data: 7,
                   child:
-                      targetHuruf[2] == false ? dragableBox('خ') : Container(),
+                      targetHuruf[7] == false ? dragableBox('خ') : dragKosong(),
                   feedback: dragableBox('خ'),
-                  childWhenDragging: Container(),
+                  childWhenDragging: dragKosong(),
                 ),
               ],
             ),
@@ -327,45 +344,51 @@ class _GameTryState extends State<GameTry> {
               children: <Widget>[
                 Draggable(
                   data: 18,
-                  child:
-                      targetHuruf[1] == false ? dragableBox('ع') : Container(),
+                  child: targetHuruf[18] == false
+                      ? dragableBox('ع')
+                      : dragKosong(),
                   feedback: dragableBox('ع'),
-                  childWhenDragging: Container(),
+                  childWhenDragging: dragKosong(),
                 ),
                 Draggable(
                   data: 17,
-                  child:
-                      targetHuruf[2] == false ? dragableBox('ظ') : Container(),
+                  child: targetHuruf[17] == false
+                      ? dragableBox('ظ')
+                      : dragKosong(),
                   feedback: dragableBox('ظ'),
-                  childWhenDragging: Container(),
+                  childWhenDragging: dragKosong(),
                 ),
                 Draggable(
                   data: 16,
-                  child:
-                      targetHuruf[1] == false ? dragableBox('ط') : Container(),
+                  child: targetHuruf[16] == false
+                      ? dragableBox('ط')
+                      : dragKosong(),
                   feedback: dragableBox('ط'),
-                  childWhenDragging: Container(),
+                  childWhenDragging: dragKosong(),
                 ),
                 Draggable(
                   data: 15,
-                  child:
-                      targetHuruf[2] == false ? dragableBox('ض') : Container(),
+                  child: targetHuruf[15] == false
+                      ? dragableBox('ض')
+                      : dragKosong(),
                   feedback: dragableBox('ض'),
-                  childWhenDragging: Container(),
+                  childWhenDragging: dragKosong(),
                 ),
                 Draggable(
                   data: 14,
-                  child:
-                      targetHuruf[1] == false ? dragableBox('ص') : Container(),
+                  child: targetHuruf[14] == false
+                      ? dragableBox('ص')
+                      : dragKosong(),
                   feedback: dragableBox('ص'),
-                  childWhenDragging: Container(),
+                  childWhenDragging: dragKosong(),
                 ),
                 Draggable(
                   data: 13,
-                  child:
-                      targetHuruf[2] == false ? dragableBox('ش') : Container(),
+                  child: targetHuruf[13] == false
+                      ? dragableBox('ش')
+                      : dragKosong(),
                   feedback: dragableBox('ش'),
-                  childWhenDragging: Container(),
+                  childWhenDragging: dragKosong(),
                 ),
               ],
             ),
@@ -373,45 +396,51 @@ class _GameTryState extends State<GameTry> {
               children: <Widget>[
                 Draggable(
                   data: 24,
-                  child:
-                      targetHuruf[1] == false ? dragableBox('م') : Container(),
+                  child: targetHuruf[24] == false
+                      ? dragableBox('م')
+                      : dragKosong(),
                   feedback: dragableBox('م'),
-                  childWhenDragging: Container(),
+                  childWhenDragging: dragKosong(),
                 ),
                 Draggable(
                   data: 23,
-                  child:
-                      targetHuruf[2] == false ? dragableBox('ل') : Container(),
+                  child: targetHuruf[23] == false
+                      ? dragableBox('ل')
+                      : dragKosong(),
                   feedback: dragableBox('ل'),
-                  childWhenDragging: Container(),
+                  childWhenDragging: dragKosong(),
                 ),
                 Draggable(
                   data: 22,
-                  child:
-                      targetHuruf[1] == false ? dragableBox('ك') : Container(),
+                  child: targetHuruf[22] == false
+                      ? dragableBox('ك')
+                      : dragKosong(),
                   feedback: dragableBox('ك'),
-                  childWhenDragging: Container(),
+                  childWhenDragging: dragKosong(),
                 ),
                 Draggable(
                   data: 21,
-                  child:
-                      targetHuruf[2] == false ? dragableBox('ق') : Container(),
+                  child: targetHuruf[21] == false
+                      ? dragableBox('ق')
+                      : dragKosong(),
                   feedback: dragableBox('ق'),
-                  childWhenDragging: Container(),
+                  childWhenDragging: dragKosong(),
                 ),
                 Draggable(
                   data: 20,
-                  child:
-                      targetHuruf[1] == false ? dragableBox('ف') : Container(),
+                  child: targetHuruf[20] == false
+                      ? dragableBox('ف')
+                      : dragKosong(),
                   feedback: dragableBox('ف'),
-                  childWhenDragging: Container(),
+                  childWhenDragging: dragKosong(),
                 ),
                 Draggable(
                   data: 19,
-                  child:
-                      targetHuruf[2] == false ? dragableBox('غ') : Container(),
+                  child: targetHuruf[19] == false
+                      ? dragableBox('غ')
+                      : dragKosong(),
                   feedback: dragableBox('غ'),
-                  childWhenDragging: Container(),
+                  childWhenDragging: dragKosong(),
                 ),
               ],
             ),
@@ -419,31 +448,35 @@ class _GameTryState extends State<GameTry> {
               children: <Widget>[
                 Draggable(
                   data: 28,
-                  child:
-                      targetHuruf[2] == false ? dragableBox('ي') : Container(),
+                  child: targetHuruf[28] == false
+                      ? dragableBox('ي')
+                      : dragKosong(),
                   feedback: dragableBox('ي'),
-                  childWhenDragging: Container(),
+                  childWhenDragging: dragKosong(),
                 ),
                 Draggable(
                   data: 27,
-                  child:
-                      targetHuruf[1] == false ? dragableBox('ھـ') : Container(),
+                  child: targetHuruf[27] == false
+                      ? dragableBox('ھـ')
+                      : dragKosong(),
                   feedback: dragableBox('ھـ'),
-                  childWhenDragging: Container(),
+                  childWhenDragging: dragKosong(),
                 ),
                 Draggable(
                   data: 26,
-                  child:
-                      targetHuruf[2] == false ? dragableBox('و') : Container(),
+                  child: targetHuruf[26] == false
+                      ? dragableBox('و')
+                      : dragKosong(),
                   feedback: dragableBox('و'),
-                  childWhenDragging: Container(),
+                  childWhenDragging: dragKosong(),
                 ),
                 Draggable(
                   data: 25,
-                  child:
-                      targetHuruf[1] == false ? dragableBox('ن') : Container(),
+                  child: targetHuruf[25] == false
+                      ? dragableBox('ن')
+                      : dragKosong(),
                   feedback: dragableBox('ن'),
-                  childWhenDragging: Container(),
+                  childWhenDragging: dragKosong(),
                 ),
               ],
             ),
@@ -522,9 +555,9 @@ class _GameTryState extends State<GameTry> {
           child: Row(
             //baris 4
             children: <Widget>[
-              targetHuruf[14] == false ? widgetKotak(14) : dragableBox('14'),
-              targetHuruf[11] == false ? widgetKotak(11) : dragableBox('11'),
-              targetHuruf[12] == false ? widgetKotak(12) : dragableBox('12'),
+              targetHuruf[14] == false ? widgetKotak(14) : dragableBox('ص'),
+              targetHuruf[11] == false ? widgetKotak(11) : dragableBox('ز'),
+              targetHuruf[12] == false ? widgetKotak(12) : dragableBox('س'),
             ],
           ),
         ), //bawahnya
@@ -544,9 +577,9 @@ class _GameTryState extends State<GameTry> {
               //baris 1
               children: <Widget>[
                 // targetHuruf[] == false ? widgetKotak() : dragableBox(''),
-                targetHuruf[23] == false ? widgetKotak(23) : dragableBox('23'),
-                targetHuruf[25] == false ? widgetKotak(25) : dragableBox('25'),
-                targetHuruf[10] == false ? widgetKotak(10) : dragableBox('10'),
+                targetHuruf[23] == false ? widgetKotak(23) : dragableBox('ل'),
+                targetHuruf[25] == false ? widgetKotak(25) : dragableBox('ن'),
+                targetHuruf[10] == false ? widgetKotak(10) : dragableBox('ر'),
               ],
             ),
           ),
@@ -558,9 +591,9 @@ class _GameTryState extends State<GameTry> {
             child: Row(
               //baris 2
               children: <Widget>[
-                targetHuruf[28] == false ? widgetKotak(28) : dragableBox('28'),
-                targetHuruf[13] == false ? widgetKotak(13) : dragableBox('13'),
-                targetHuruf[5] == false ? widgetKotak(5) : dragableBox('5'),
+                targetHuruf[28] == false ? widgetKotak(28) : dragableBox('ي'),
+                targetHuruf[13] == false ? widgetKotak(13) : dragableBox('ش'),
+                targetHuruf[5] == false ? widgetKotak(5) : dragableBox('ج'),
               ],
             ),
           ),
@@ -572,7 +605,7 @@ class _GameTryState extends State<GameTry> {
             child: Row(
               //baris 3
               children: <Widget>[
-                targetHuruf[15] == false ? widgetKotak(15) : dragableBox('15')
+                targetHuruf[15] == false ? widgetKotak(15) : dragableBox('ض')
               ],
             ),
           ),
@@ -592,8 +625,8 @@ class _GameTryState extends State<GameTry> {
             mainAxisAlignment: MainAxisAlignment.end,
             //baris 1
             children: <Widget>[
-              targetHuruf[22] == false ? widgetKotak(22) : dragableBox('22'),
-              targetHuruf[21] == false ? widgetKotak(21) : dragableBox('21'),
+              targetHuruf[22] == false ? widgetKotak(22) : dragableBox('ك'),
+              targetHuruf[21] == false ? widgetKotak(21) : dragableBox('ق'),
             ],
           ),
         ),
@@ -604,8 +637,8 @@ class _GameTryState extends State<GameTry> {
             mainAxisAlignment: MainAxisAlignment.end,
             //baris 2
             children: <Widget>[
-              targetHuruf[7] == false ? widgetKotak(7) : dragableBox('7'),
-              targetHuruf[19] == false ? widgetKotak(19) : dragableBox('19'),
+              targetHuruf[7] == false ? widgetKotak(7) : dragableBox('خ'),
+              targetHuruf[19] == false ? widgetKotak(19) : dragableBox('غ'),
             ],
           ),
         ),
@@ -616,8 +649,8 @@ class _GameTryState extends State<GameTry> {
             mainAxisAlignment: MainAxisAlignment.end,
             //baris 3
             children: <Widget>[
-              targetHuruf[6] == false ? widgetKotak(6) : dragableBox('6'),
-              targetHuruf[18] == false ? widgetKotak(18) : dragableBox('18'),
+              targetHuruf[6] == false ? widgetKotak(6) : dragableBox('ح'),
+              targetHuruf[18] == false ? widgetKotak(18) : dragableBox('ع'),
             ],
           ),
         ),
@@ -628,8 +661,8 @@ class _GameTryState extends State<GameTry> {
             mainAxisAlignment: MainAxisAlignment.end,
             //baris 4
             children: <Widget>[
-              targetHuruf[27] == false ? widgetKotak(27) : dragableBox('27'),
-              targetHuruf[1] == false ? widgetKotak(1) : dragableBox('1'),
+              targetHuruf[27] == false ? widgetKotak(27) : dragableBox('ھـ'),
+              targetHuruf[1] == false ? widgetKotak(1) : dragableBox('ا'),
             ],
           ),
         ), //bawahnya
@@ -679,19 +712,40 @@ class _GameTryState extends State<GameTry> {
                 // targetHuruf[i] = false;
                 // }
               });
+              audioCache.play('correct.mp3');
+
               scaffoldKey.currentState.showSnackBar(SnackBar(
-                content: Text("Tepat Sekali!"),
-                duration: Duration(milliseconds: 500),
+                content: Text("✓ Tepat Sekali! ",
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold, color: Colors.white)),
+                backgroundColor: Color(0xff86c933),
+                duration: Duration(milliseconds: 1000),
               ));
             } else {
+              audioCache.play('incorrect.mp3');
               scaffoldKey.currentState.showSnackBar(SnackBar(
-                content: Text("Kurang Tepat!"),
-                duration: Duration(milliseconds: 500),
+                content: Text("✕ Kurang Tepat!", style: TextStyle(
+                        fontWeight: FontWeight.bold, color: Colors.white)),
+                backgroundColor: Color(0xffd32f2f),
+                duration: Duration(milliseconds: 1000),
               ));
             }
           },
         ),
       ),
+    );
+  }
+
+  Padding dragKosong() {
+    return Padding(
+      padding: const EdgeInsets.all(7),
+      child: Container(
+          height: 50,
+          width: 50,
+          decoration: BoxDecoration(
+            color: Colors.black12,
+            borderRadius: BorderRadius.all(Radius.circular(6)),
+          )),
     );
   }
 }
