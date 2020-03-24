@@ -78,14 +78,17 @@ class _GameTryState extends State<GameTry> {
       key: scaffoldKey,
       appBar: AppBar(
         backgroundColor: Color(0xffF57c00),
-        title: Text('Game'),
+        title: Text('Game',style: TextStyle(fontWeight: FontWeight.bold),),
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.refresh),
+            tooltip: 'Reset',
             onPressed: () {
-              for (int i = 1; i < 29; i++) targetHuruf[i] = false;
+              setState(() {
+                for (int i = 1; i < 29; i++) 
+                targetHuruf[i] = false;
               print('reset');
-              // }
+              });
             },
           ),
           IconButton(
