@@ -77,11 +77,6 @@ class _MainMenuState extends State<MainMenu> {
                               context: context,
                               builder: (BuildContext context) {
                                 return AlertDialog(
-                                  //title: Text(
-                                  // 'FastQuran',
-                                  // style:
-                                  //TextStyle(fontWeight: FontWeight.bold),
-                                  // ),
                                   content: SingleChildScrollView(
                                     child: ListBody(
                                       children: <Widget>[
@@ -113,7 +108,8 @@ class _MainMenuState extends State<MainMenu> {
                                   ),
                                 );
                               });
-                        })),
+                        }
+                        )),
               ),
             ],
           ),
