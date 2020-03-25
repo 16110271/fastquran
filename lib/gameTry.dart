@@ -2,6 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audio_cache.dart';
 import 'package:audioplayers/audioplayers.dart';
+import 'package:confetti/confetti.dart';
 
 class GameTry extends StatefulWidget {
   @override
@@ -78,16 +79,18 @@ class _GameTryState extends State<GameTry> {
       key: scaffoldKey,
       appBar: AppBar(
         backgroundColor: Color(0xffF57c00),
-        title: Text('Game',style: TextStyle(fontWeight: FontWeight.bold),),
+        title: Text(
+          'Game',
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ),
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.refresh),
             tooltip: 'Reset',
             onPressed: () {
               setState(() {
-                for (int i = 1; i < 29; i++) 
-                targetHuruf[i] = false;
-              print('reset');
+                for (int i = 1; i < 29; i++) targetHuruf[i] = false;
+                print('reset');
               });
             },
           ),
@@ -119,9 +122,6 @@ class _GameTryState extends State<GameTry> {
                             Text(
                                 '\nAplikasi pengenalan huruf hijaiyah. Berisi tentang informasi huruf hijaiyah secara detail lengkap dengan cara pengucapan, dan contoh suara pelafalan dengan benar. Terdapat dua menu yaitu Informasi Detail Huruf, dan permainan drag and drop sederhana tentang tempat keluar huruf hijaiyah secara tepat.',
                                 textAlign: TextAlign.justify),
-                            // Text('\n2020 © FastQuran',
-                            //style:
-                            // TextStyle(color: Colors.grey)),
                           ],
                         ),
                       ),
@@ -710,45 +710,54 @@ class _GameTryState extends State<GameTry> {
               setState(() {
                 targetHuruf[hurufHijaiyah] = true;
 
-                //untuk reset tombol
-                // for (int i = 1; i < 30; i++) {
-                // targetHuruf[i] = false;
-                // }
-              });
-              audioCache.play('correct.mp3');
+                bool completed = true;
+                for (int i = 1; i < 30; i++) {
+                  if (targetHuruf[i] == false) {
+                    completed = false;
+                  }
+                }
 
-              scaffoldKey.currentState.showSnackBar(SnackBar(
-                content: Text("✓ Tepat Sekali! ",
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold, color: Colors.white)),
-                backgroundColor: Color(0xff86c933),
-                duration: Duration(milliseconds: 1000),
-              ));
-            } else {
-              audioCache.play('incorrect.mp3');
-              scaffoldKey.currentState.showSnackBar(SnackBar(
-                content: Text("✕ Kurang Tepat!", style: TextStyle(
-                        fontWeight: FontWeight.bold, color: Colors.white)),
-                backgroundColor: Color(0xffd32f2f),
-                duration: Duration(milliseconds: 1000),
-              ));
-            }
-          },
-        ),
-      ),
-    );
-  }
-
-  Padding dragKosong() {
-    return Padding(
-      padding: const EdgeInsets.all(7),
-      child: Container(
-          height: 50,
-          width: 50,
-          decoration: BoxDecoration(
-            color: Colors.black12,
-            borderRadius: BorderRadius.all(Radius.circular(6)),
-          )),
-    );
-  }
+                if (completed == true) {
+                  doCelebrate();
+                                  }
+                                });
+                                audioCache.play('correct.mp3');
+                  
+                                scaffoldKey.currentState.showSnackBar(SnackBar(
+                                  content: Text("✓ Tepat Sekali! ",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold, color: Colors.white)),
+                                  backgroundColor: Color(0xff86c933),
+                                  duration: Duration(milliseconds: 1000),
+                                ));
+                              } else {
+                                audioCache.play('incorrect.mp3');
+                                scaffoldKey.currentState.showSnackBar(SnackBar(
+                                  content: Text("✕ Kurang Tepat!",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold, color: Colors.white)),
+                                  backgroundColor: Color(0xffd32f2f),
+                                  duration: Duration(milliseconds: 1000),
+                                ));
+                              }
+                            },
+                          ),
+                        ),
+                      );
+                    }
+                  
+                    Padding dragKosong() {
+                      return Padding(
+                        padding: const EdgeInsets.all(7),
+                        child: Container(
+                            height: 50,
+                            width: 50,
+                            decoration: BoxDecoration(
+                              color: Colors.black12,
+                              borderRadius: BorderRadius.all(Radius.circular(6)),
+                            )),
+                      );
+                    }
+                  
+                    void doCelebrate() {}
 }
