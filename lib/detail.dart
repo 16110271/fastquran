@@ -42,6 +42,7 @@ class _DetailAppState extends State<DetailApp> {
   Widget build(BuildContext context) {
     print(widget.huruf.kategori);
     return Scaffold(
+      backgroundColor: Color(0xffEFEFEF),
       appBar: AppBar(
         backgroundColor: Color(0xffF57c00),
         title: Text(
@@ -73,55 +74,110 @@ class _DetailAppState extends State<DetailApp> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: <Widget>[
-                      FlatButton(
-                        color: fathah ? activeColor : inactiveColor,
-                        padding:
-                            EdgeInsets.symmetric(vertical: 6, horizontal: 15),
-                        splashColor: Color(0xffF57c00),
-                        onPressed: () {
+                      InkWell(
+                        onTap: () {
                           setState(() {
                             fathah = true;
                             kasrah = false;
                             dhomah = false;
                           });
-                        }, //_fathahOnPress,
-                        child: Text(
-                          "Fathah",
-                          style: TextStyle(color: Colors.black),
+                        },
+                        child: Container(
+                          height: 50,
+                          width: 100,
+                          decoration: new BoxDecoration(
+                              color: fathah ? activeColor : inactiveColor,
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black26,
+                                  blurRadius: 6.0,
+                                  offset: Offset(2, 2),
+                                )
+                              ],
+                              borderRadius:
+                                  new BorderRadius.all(Radius.circular(10))),
+                          padding:
+                              EdgeInsets.symmetric(vertical: 6, horizontal: 15),
+                          //_fathahOnPress,
+                          child: Center(
+                            child: Text(
+                              "Fathah",
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
                         ),
                       ),
-                      FlatButton(
-                        color: kasrah ? activeColor : inactiveColor,
-                        padding:
-                            EdgeInsets.symmetric(vertical: 6, horizontal: 15),
-                        splashColor: Color(0xffF57c00),
-                        onPressed: () {
+                      InkWell(
+                        onTap: () {
                           setState(() {
                             fathah = false;
                             kasrah = true;
                             dhomah = false;
                           });
-                        }, //_kasrahOnPress,
-                        child: Text(
-                          "Kasrah",
-                          style: TextStyle(color: Colors.black),
+                        },
+                        child: Container(
+                          height: 50,
+                          width: 100,
+                          decoration: new BoxDecoration(
+                              color: kasrah ? activeColor : inactiveColor,
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black26,
+                                  blurRadius: 6.0,
+                                  offset: Offset(2, 2),
+                                )
+                              ],
+                              borderRadius:
+                                  new BorderRadius.all(Radius.circular(10))),
+                          padding:
+                              EdgeInsets.symmetric(vertical: 6, horizontal: 15),
+
+                          //_kasrahOnPress,
+                          child: Center(
+                            child: Text(
+                              "Kasrah",
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
                         ),
                       ),
-                      FlatButton(
-                        color: dhomah ? activeColor : inactiveColor,
-                        padding:
-                            EdgeInsets.symmetric(vertical: 6, horizontal: 15),
-                        splashColor: Color(0xffF57c00),
-                        onPressed: () {
+                      InkWell(
+                        onTap: () {
                           setState(() {
                             fathah = false;
                             kasrah = false;
                             dhomah = true;
                           });
-                        }, //_dhomahOnPress,
-                        child: Text(
-                          "Dhomah",
-                          style: TextStyle(color: Colors.black),
+                        },
+                        child: Container(
+                          height: 50,
+                          width: 100,
+                          decoration: new BoxDecoration(
+                              color: dhomah ? activeColor : inactiveColor,
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black26,
+                                  blurRadius: 6.0,
+                                  offset: Offset(2, 2),
+                                )
+                              ],
+                              borderRadius:
+                                  new BorderRadius.all(Radius.circular(10))),
+                          padding:
+                              EdgeInsets.symmetric(vertical: 6, horizontal: 15),
+                          //_dhomahOnPress,
+                          child: Center(
+                            child: Text(
+                              "Dhomah",
+                              style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+                            ),
+                          ),
                         ),
                       ),
                     ],
@@ -157,19 +213,46 @@ class _DetailAppState extends State<DetailApp> {
                   ],
                 ),
                 Container(
+                  height: 100,
+                  width: 350,
+                  decoration: new BoxDecoration(
+                      color: Colors.white,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black26,
+                          blurRadius: 6.0,
+                          offset: Offset(2, 2),
+                        )
+                      ],
+                      borderRadius: new BorderRadius.all(Radius.circular(10))),
                   margin: EdgeInsets.only(top: 20),
-                  child: Column(children: <Widget>[
-                    Text('Cara Pengucapan',
-                        style: TextStyle(fontWeight: FontWeight.bold)),
-                    Container(
-                        margin: EdgeInsets.only(top: 5),
-                        child: Text(
-                          widget.huruf.karakter,
-                          textAlign: TextAlign.center,
-                        )),
-                  ]),
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: 20.0),
+                    child: Column(children: <Widget>[
+                      Text('Cara Pengucapan',
+                          style: TextStyle(fontWeight: FontWeight.bold)),
+                      Container(
+                          margin: EdgeInsets.only(top: 5),
+                          child: Text(
+                            widget.huruf.karakter,
+                            textAlign: TextAlign.center,
+                          )),
+                    ]),
+                  ),
                 ),
                 Container(
+                  height: 100,
+                  width: 350,
+                  decoration: new BoxDecoration(
+                      color: Colors.white,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black26,
+                          blurRadius: 6.0,
+                          offset: Offset(2, 2),
+                        )
+                      ],
+                      borderRadius: new BorderRadius.all(Radius.circular(10))),
                   margin: EdgeInsets.only(top: 30),
                   child: Column(children: <Widget>[
                     Text('Tempat Keluar Huruf',
@@ -180,7 +263,6 @@ class _DetailAppState extends State<DetailApp> {
                             textAlign: TextAlign.center)),
                   ]),
                 ),
-                
               ],
             ),
           ))
