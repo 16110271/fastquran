@@ -1,5 +1,7 @@
-import 'package:Fast_Quran/detail.dart';
+//import 'package:Fast_Quran/detail.dart';
 import 'package:flutter/material.dart';
+
+import 'detailTry.dart';
 
 class HurufModel {
   final String nama;
@@ -351,7 +353,7 @@ class _DisplayListViewState extends State {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => DetailApp(
+                          builder: (context) => DetailTryApp(
                                 huruf: listHuruf[i],
                               )));
                 },

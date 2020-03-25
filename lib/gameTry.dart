@@ -719,45 +719,48 @@ class _GameTryState extends State<GameTry> {
 
                 if (completed == true) {
                   doCelebrate();
-                                  }
-                                });
-                                audioCache.play('correct.mp3');
+                                                    }
+                                                  });
+                                                  audioCache.play('correct.mp3');
+                                    
+                                                  scaffoldKey.currentState.showSnackBar(SnackBar(
+                                                    content: Text("✓ Tepat Sekali! ",
+                                                        style: TextStyle(
+                                                            fontWeight: FontWeight.bold, color: Colors.white)),
+                                                    backgroundColor: Color(0xff86c933),
+                                                    duration: Duration(milliseconds: 1000),
+                                                  ));
+                                                } else {
+                                                  audioCache.play('incorrect.mp3');
+                                                  scaffoldKey.currentState.showSnackBar(SnackBar(
+                                                    content: Text("✕ Kurang Tepat!",
+                                                        style: TextStyle(
+                                                            fontWeight: FontWeight.bold, color: Colors.white)),
+                                                    backgroundColor: Color(0xffd32f2f),
+                                                    duration: Duration(milliseconds: 1000),
+                                                  ));
+                                                }
+                                              },
+                                            ),
+                                          ),
+                                        );
+                                      }
+                                    
+                                      Padding dragKosong() {
+                                        return Padding(
+                                          padding: const EdgeInsets.all(7),
+                                          child: Container(
+                                              height: 50,
+                                              width: 50,
+                                              decoration: BoxDecoration(
+                                                color: Colors.black12,
+                                                borderRadius: BorderRadius.all(Radius.circular(6)),
+                                              )),
+                                        );
+                                      }
+                                    
+                                     
+                  }
                   
-                                scaffoldKey.currentState.showSnackBar(SnackBar(
-                                  content: Text("✓ Tepat Sekali! ",
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold, color: Colors.white)),
-                                  backgroundColor: Color(0xff86c933),
-                                  duration: Duration(milliseconds: 1000),
-                                ));
-                              } else {
-                                audioCache.play('incorrect.mp3');
-                                scaffoldKey.currentState.showSnackBar(SnackBar(
-                                  content: Text("✕ Kurang Tepat!",
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold, color: Colors.white)),
-                                  backgroundColor: Color(0xffd32f2f),
-                                  duration: Duration(milliseconds: 1000),
-                                ));
-                              }
-                            },
-                          ),
-                        ),
-                      );
-                    }
-                  
-                    Padding dragKosong() {
-                      return Padding(
-                        padding: const EdgeInsets.all(7),
-                        child: Container(
-                            height: 50,
-                            width: 50,
-                            decoration: BoxDecoration(
-                              color: Colors.black12,
-                              borderRadius: BorderRadius.all(Radius.circular(6)),
-                            )),
-                      );
-                    }
-                  
-                    void doCelebrate() {}
+                  void doCelebrate() {
 }
