@@ -350,7 +350,7 @@ class _DisplayListViewState extends State {
                 trailing: new Text(listHuruf[i].gambar,
                     style: TextStyle(fontFamily: 'DUBAI', fontSize: 30)),
                 onTap: () {
-                  Navigator.push(
+                  Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
                           builder: (context) => DetailTryApp(
