@@ -1,9 +1,10 @@
 //import 'package:Fast_Quran/game.dart';
+import 'package:Fast_Quran/HurufModelGrid.dart';
 import 'package:Fast_Quran/gameTry.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
 
-import 'HurufModel.dart';
+//import 'HurufModel.dart';
 
 class MainMenu extends StatefulWidget {
   @override
@@ -119,7 +120,7 @@ class _MainMenuState extends State<MainMenu> {
             child: InkWell(
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => DisplayListView()));
+                    MaterialPageRoute(builder: (context) => DisplayListViewGrid()));
               },
               child: Container(
                 height: 200,

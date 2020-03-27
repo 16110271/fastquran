@@ -319,122 +319,165 @@ List listHuruf = [
   ),
 ];
 
-class DisplayListView extends StatefulWidget {
+class DisplayListViewGrid extends StatefulWidget {
   @override
-  _DisplayListViewState createState() => _DisplayListViewState();
+  _DisplayListViewStateGrid createState() => _DisplayListViewStateGrid();
 }
 
-class _DisplayListViewState extends State {
+class _DisplayListViewStateGrid extends State {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Color(0xffF57c00),
-        title: Text(
-          "List Huruf",
-          style: TextStyle(fontWeight: FontWeight.bold),
+    return new MaterialApp(
+      title: 'Flutter TabBar',
+      home: new Home(),
+      theme: ThemeData(fontFamily: 'Montserrat'),
+    );
+  }
+}
+
+class Home extends StatefulWidget {
+  @override
+  _HomeState createState() => new _HomeState();
+}
+
+class _HomeState extends State<Home> with TickerProviderStateMixin {
+  TabController tabController;
+
+  @override
+  Widget build(BuildContext context) {
+    tabController = new TabController(length: 2, vsync: this);
+
+    var tabBarItem = new TabBar(
+      tabs: [
+        new Tab(
+          icon: new Icon(Icons.list),
         ),
-      ),
-      body: Container(
-        padding: EdgeInsets.only(right: 10),
-    //     child: Directionality(
-    //   textDirection: TextDirection.rtl,
-    //   child: new GridView.builder(
-    //       itemCount: listHuruf.length,
-    //       gridDelegate:
-    //           new SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3, 
-    //             childAspectRatio: 16/20),
-    //       itemBuilder: (context, int i) {
-    //         return new GestureDetector(
-    //           child: Padding(
-    //             padding: const EdgeInsets.all(8),
-    //             child: new Container(
-    //                 height: 100,
-    //                 width: 200,
-    //                 child: Column(
-    //                   children: <Widget>[
-    //                     Container(
-    //                       alignment: Alignment.center,
-    //                       child: Padding(
-    //                         padding: const EdgeInsets.all(8.0),
-    //                         child: Column(
-    //                           children: <Widget>[
-    //                             new Text(listHuruf[i].gambar,
-    //                                 style: TextStyle(
-    //                                   fontSize: 60,
-    //                                   fontFamily: 'DUBAI',
-    //                                 )),
-    //                           ],
-    //                         ),
-    //                       ),
-    //                     ),
-    //                     Directionality(
-    //                       textDirection: TextDirection.ltr,
-    //                       child: Container(
-    //                         // color: Colors.blueGrey,
-    //                         width: 90,
-    //                           child: Padding(
-    //                             padding: const EdgeInsets.only(top:2.0),
-    //                             child: Column(
-    //                         crossAxisAlignment: CrossAxisAlignment.start,
-    //                         children: <Widget>[
-    //                             new Text(listHuruf[i].nama,
-    //                                 style:
-    //                                     TextStyle(fontWeight: FontWeight.bold, fontSize: 15)),
-    //                             new Text(listHuruf[i].kategori,
-    //                                 style: TextStyle(fontSize: 10)),
-    //                         ],
-    //                       ),
-    //                           )),
-    //                     )
-    //                   ],
-    //                 ),
-    //                 decoration: BoxDecoration(
-    //                   color: Color(0xffFFFFFF),
-    //                   boxShadow: [
-    //                     BoxShadow(
-    //                       color: Colors.black26,
-    //                       blurRadius: 6.0,
-    //                       offset: Offset(2, 2),
-    //                     )
-    //                   ],
-    //                   borderRadius: BorderRadius.all(Radius.circular(6)),
-    //                 )),
-    //           ),
-    //           onTap: () {
-    //             Navigator.push(
-    //                 context,
-    //                 MaterialPageRoute(
-    //                     builder: (context) => DetailTryApp(
-    //                           huruf: listHuruf[i],
-    //                         )));
-    //           },
-    //         );
-    //       }),
-    // )
-        child: ListView.builder(
-          itemCount: listHuruf.length,
-          itemBuilder: (context, int i) => Column(
-            children: [
-              new ListTile(
-                title: new Text(
-                  listHuruf[i].nama,
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-                subtitle: new Text(listHuruf[i].kategori),
-                trailing: new Text(listHuruf[i].gambar,
-                    style: TextStyle(fontFamily: 'DUBAI', fontSize: 30)),
-                onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => DetailTryApp(
-                                huruf: listHuruf[i],
-                              )));
-                },
-              ),
-            ],
+        new Tab(
+          icon: new Icon(Icons.grid_on),
+        ),
+      ],
+      controller: tabController,
+      indicatorColor: Colors.white,
+    );
+
+    var listItem = new ListView.builder(
+      itemCount: listHuruf.length,
+      itemBuilder: (context, int i) => Column(
+        children: [
+          new ListTile(
+            title: new Text(
+              listHuruf[i].nama,
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
+            subtitle: new Text(listHuruf[i].kategori),
+            trailing: new Text(listHuruf[i].gambar,
+                style: TextStyle(fontFamily: 'DUBAI', fontSize: 30)),
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => DetailTryApp(
+                            huruf: listHuruf[i],
+                          )));
+            },
           ),
+        ],
+      ),
+    );
+    var dcontainer = new Container(
+        child: Directionality(
+      textDirection: TextDirection.rtl,
+      child: new GridView.builder(
+          itemCount: listHuruf.length,
+          gridDelegate:
+              new SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3, 
+                childAspectRatio: 16/20),
+          itemBuilder: (context, int i) {
+            return new GestureDetector(
+              child: Padding(
+                padding: const EdgeInsets.all(8),
+                child: new Container(
+                    height: 100,
+                    width: 200,
+                    child: Column(
+                      children: <Widget>[
+                        Container(
+                          alignment: Alignment.center,
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Column(
+                              children: <Widget>[
+                                new Text(listHuruf[i].gambar,
+                                    style: TextStyle(
+                                      fontSize: 60,
+                                      fontFamily: 'DUBAI',
+                                    )),
+                              ],
+                            ),
+                          ),
+                        ),
+                        Directionality(
+                          textDirection: TextDirection.ltr,
+                          child: Container(
+                            // color: Colors.blueGrey,
+                            width: 90,
+                              child: Padding(
+                                padding: const EdgeInsets.only(top:2.0),
+                                child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                                new Text(listHuruf[i].nama,
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold, fontSize: 15)),
+                                new Text(listHuruf[i].kategori,
+                                    style: TextStyle(fontSize: 10)),
+                            ],
+                          ),
+                              )),
+                        )
+                      ],
+                    ),
+                    decoration: BoxDecoration(
+                      color: Color(0xffFFFFFF),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black26,
+                          blurRadius: 6.0,
+                          offset: Offset(2, 2),
+                        )
+                      ],
+                      borderRadius: BorderRadius.all(Radius.circular(6)),
+                    )),
+              ),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => DetailTryApp(
+                              huruf: listHuruf[i],
+                            )));
+              },
+            );
+          }),
+    ));
+
+    return new DefaultTabController(
+      length: 2,
+      child: new Scaffold(
+        appBar: new AppBar(
+          backgroundColor: Color(0xffF57c00),
+          title: Text(
+            "List Huruf",
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
+          bottom: tabBarItem,
+        ),
+        body: new TabBarView(
+          controller: tabController,
+          children: [
+            listItem,
+            dcontainer,
+          ],
         ),
       ),
     );
