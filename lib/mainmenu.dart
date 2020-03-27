@@ -25,10 +25,17 @@ class _MainMenuState extends State<MainMenu> {
                   height: MediaQuery.of(context).size.height * 0.5,
                   width: MediaQuery.of(context).size.width,
                   decoration: new BoxDecoration(
+                    boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.black26,
+                                    blurRadius: 6.0,
+                                    offset: Offset(2, 2),
+                                  )
+                                ],
                       color: Color(0xffF57c00),
                       borderRadius: new BorderRadius.only(
-                          bottomLeft: const Radius.circular(8.0),
-                          bottomRight: const Radius.circular(8.0))),
+                      bottomLeft: const Radius.circular(20.0),
+                      bottomRight: const Radius.circular(20.0))),
                   child: Container(
                     child: Padding(
                       padding: EdgeInsets.only(

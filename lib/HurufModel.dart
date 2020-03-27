@@ -334,6 +334,15 @@ class _DisplayListViewState extends State {
           "List Huruf",
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.info_outline),
+            tooltip: 'Reset',
+            onPressed: () {
+              setState(() {});
+            },
+          ),
+        ],
       ),
       body: Container(
         child: Directionality(

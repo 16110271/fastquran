@@ -44,14 +44,7 @@ class _DetailTryAppState extends State<DetailTryApp> {
   Widget build(BuildContext context) {
     print(widget.huruf.kategori);
     return Scaffold(
-        backgroundColor: Color(0xffFFFFFF), //Color(0xffEFEFEF),
-        // appBar: AppBar(
-        //   backgroundColor: Color(0xffF57c00),
-        //   title: Text(
-        //     "Huruf " + widget.huruf.nama,
-        //     style: TextStyle(fontWeight: FontWeight.bold),
-        //   ),
-        // ),
+        backgroundColor: Color(0xffFFFFFF),
         body: Stack(
           children: <Widget>[
             Container(

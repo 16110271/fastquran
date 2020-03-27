@@ -125,7 +125,8 @@ class _GameTryState extends State<GameTry> {
                         ),
                       ),
                     );
-                  });
+                  }
+                  );
             },
           )
         ],
@@ -717,7 +718,37 @@ class _GameTryState extends State<GameTry> {
                 }
 
                 if (completed == true) {
-                  doCelebrate();
+                  showDialog(
+                  context: context,
+                  builder: (BuildContext context) {
+                    return AlertDialog(
+                      content: SingleChildScrollView(
+                        child: ListBody(
+                          children: <Widget>[
+                            Padding(
+                              padding: const EdgeInsets.only(bottom: 20),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: <Widget>[
+                                  Image.asset('image/logo.png', height: 40),
+                                ],
+                              ),
+                            ),
+                            Text(
+                              'Version 1.0 \n2020 © FastQuran',
+                              style: TextStyle(color: Colors.grey),
+                            ),
+                            Text(
+                                '\nAplikasi pengenalan huruf hijaiyah. Berisi tentang informasi huruf hijaiyah secara detail lengkap dengan cara pengucapan, dan contoh suara pelafalan dengan benar. Terdapat dua menu yaitu Informasi Detail Huruf, dan permainan drag and drop sederhana tentang tempat keluar huruf hijaiyah secara tepat.',
+                                textAlign: TextAlign.justify),
+                          ],
+                        ),
+                      ),
+                    );
+                  }
+                  );
                                                     }
                                                   });
                                                   audioCache.play('correct.mp3');
@@ -761,5 +792,3 @@ class _GameTryState extends State<GameTry> {
                                      
                   }
                   
-                  void doCelebrate() {
-}
