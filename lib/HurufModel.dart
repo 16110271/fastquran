@@ -336,106 +336,105 @@ class _DisplayListViewState extends State {
         ),
       ),
       body: Container(
-        padding: EdgeInsets.only(right: 10),
-    //     child: Directionality(
-    //   textDirection: TextDirection.rtl,
-    //   child: new GridView.builder(
-    //       itemCount: listHuruf.length,
-    //       gridDelegate:
-    //           new SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3, 
-    //             childAspectRatio: 16/20),
-    //       itemBuilder: (context, int i) {
-    //         return new GestureDetector(
-    //           child: Padding(
-    //             padding: const EdgeInsets.all(8),
-    //             child: new Container(
-    //                 height: 100,
-    //                 width: 200,
-    //                 child: Column(
-    //                   children: <Widget>[
-    //                     Container(
-    //                       alignment: Alignment.center,
-    //                       child: Padding(
-    //                         padding: const EdgeInsets.all(8.0),
-    //                         child: Column(
-    //                           children: <Widget>[
-    //                             new Text(listHuruf[i].gambar,
-    //                                 style: TextStyle(
-    //                                   fontSize: 60,
-    //                                   fontFamily: 'DUBAI',
-    //                                 )),
-    //                           ],
-    //                         ),
-    //                       ),
-    //                     ),
-    //                     Directionality(
-    //                       textDirection: TextDirection.ltr,
-    //                       child: Container(
-    //                         // color: Colors.blueGrey,
-    //                         width: 90,
-    //                           child: Padding(
-    //                             padding: const EdgeInsets.only(top:2.0),
-    //                             child: Column(
-    //                         crossAxisAlignment: CrossAxisAlignment.start,
-    //                         children: <Widget>[
-    //                             new Text(listHuruf[i].nama,
-    //                                 style:
-    //                                     TextStyle(fontWeight: FontWeight.bold, fontSize: 15)),
-    //                             new Text(listHuruf[i].kategori,
-    //                                 style: TextStyle(fontSize: 10)),
-    //                         ],
-    //                       ),
-    //                           )),
-    //                     )
-    //                   ],
-    //                 ),
-    //                 decoration: BoxDecoration(
-    //                   color: Color(0xffFFFFFF),
-    //                   boxShadow: [
-    //                     BoxShadow(
-    //                       color: Colors.black26,
-    //                       blurRadius: 6.0,
-    //                       offset: Offset(2, 2),
-    //                     )
-    //                   ],
-    //                   borderRadius: BorderRadius.all(Radius.circular(6)),
-    //                 )),
-    //           ),
-    //           onTap: () {
-    //             Navigator.push(
-    //                 context,
-    //                 MaterialPageRoute(
-    //                     builder: (context) => DetailTryApp(
-    //                           huruf: listHuruf[i],
-    //                         )));
-    //           },
-    //         );
-    //       }),
-    // )
-        child: ListView.builder(
+        child: Directionality(
+      textDirection: TextDirection.rtl,
+      child: new GridView.builder(
           itemCount: listHuruf.length,
-          itemBuilder: (context, int i) => Column(
-            children: [
-              new ListTile(
-                title: new Text(
-                  listHuruf[i].nama,
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-                subtitle: new Text(listHuruf[i].kategori),
-                trailing: new Text(listHuruf[i].gambar,
-                    style: TextStyle(fontFamily: 'DUBAI', fontSize: 30)),
-                onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => DetailTryApp(
-                                huruf: listHuruf[i],
-                              )));
-                },
+          gridDelegate:
+              new SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3, 
+                childAspectRatio: 16/20),
+          itemBuilder: (context, int i) {
+            return new GestureDetector(
+              child: Padding(
+                padding: const EdgeInsets.all(8),
+                child: new Container(
+                    height: 100,
+                    width: 200,
+                    child: Column(
+                      children: <Widget>[
+                        Container(
+                          alignment: Alignment.center,
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Column(
+                              children: <Widget>[
+                                new Text(listHuruf[i].gambar,
+                                    style: TextStyle(
+                                      fontSize: 60,
+                                      fontFamily: 'DUBAI',
+                                    )),
+                              ],
+                            ),
+                          ),
+                        ),
+                        Directionality(
+                          textDirection: TextDirection.ltr,
+                          child: Container(
+                            // color: Colors.blueGrey,
+                            width: 90,
+                              child: Padding(
+                                padding: const EdgeInsets.only(top:2.0),
+                                child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                                new Text(listHuruf[i].nama,
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold, fontSize: 15)),
+                                new Text(listHuruf[i].kategori,
+                                    style: TextStyle(fontSize: 10)),
+                            ],
+                          ),
+                              )),
+                        )
+                      ],
+                    ),
+                    decoration: BoxDecoration(
+                      color: Color(0xffFFFFFF),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black26,
+                          blurRadius: 6.0,
+                          offset: Offset(2, 2),
+                        )
+                      ],
+                      borderRadius: BorderRadius.all(Radius.circular(6)),
+                    )),
               ),
-            ],
-          ),
-        ),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => DetailTryApp(
+                              huruf: listHuruf[i],
+                            )));
+              },
+            );
+          }),
+    )
+        // child: ListView.builder(
+        //   itemCount: listHuruf.length,
+        //   itemBuilder: (context, int i) => Column(
+        //     children: [
+        //       new ListTile(
+        //         title: new Text(
+        //           listHuruf[i].nama,
+        //           style: TextStyle(fontWeight: FontWeight.bold),
+        //         ),
+        //         subtitle: new Text(listHuruf[i].kategori),
+        //         trailing: new Text(listHuruf[i].gambar,
+        //             style: TextStyle(fontFamily: 'DUBAI', fontSize: 30)),
+        //         onTap: () {
+        //           Navigator.push(
+        //               context,
+        //               MaterialPageRoute(
+        //                   builder: (context) => DetailTryApp(
+        //                         huruf: listHuruf[i],
+        //                       )));
+        //         },
+        //       ),
+        //     ],
+        //   ),
+        // ),
       ),
     );
   }
