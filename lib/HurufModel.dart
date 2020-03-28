@@ -331,7 +331,7 @@ class _DisplayListViewState extends State {
       appBar: AppBar(
         backgroundColor: Color(0xffF57c00),
         title: Text(
-          "List Huruf",
+          "Huruf Hijaiyah",
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
         actions: <Widget>[
