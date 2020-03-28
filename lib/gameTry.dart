@@ -27,9 +27,9 @@ class _GameTryState extends State<GameTry> {
 
   int _current = 0;
   List<List> imgList = [
-    ['image/aa.jpg', 1],
-    ['image/bb.jpg', 2],
-    ['image/cc.jpg', 3],
+    ['image/slide1.png', 1],
+    ['image/slide2.png', 2],
+    ['image/slide3.png', 3],
   ];
 
   List<T> map<T>(List list, Function handler) {
