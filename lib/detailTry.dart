@@ -51,13 +51,13 @@ class _DetailTryAppState extends State<DetailTryApp> {
               height: MediaQuery.of(context).size.height * 0.5,
               width: MediaQuery.of(context).size.width,
               decoration: new BoxDecoration(
-                boxShadow: [
-                                  BoxShadow(
-                                    color: Colors.black26,
-                                    blurRadius: 6.0,
-                                    offset: Offset(2, 2),
-                                  )
-                                ],
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black26,
+                      blurRadius: 6.0,
+                      offset: Offset(2, 2),
+                    )
+                  ],
                   color: Color(0xffFFFFFF),
                   borderRadius: new BorderRadius.only(
                       bottomLeft: const Radius.circular(20.0),
@@ -80,7 +80,11 @@ class _DetailTryAppState extends State<DetailTryApp> {
                 ),
               ),
             ),
+            fathah == true ? gambarFathah() : Container(),
+            dhomah == true ? gambarDhomah() : Container(),
+            kasrah == true ? gambarKasrah() : Container(),
             Padding(
+              //top button
               padding: const EdgeInsets.only(top: 40, left: 0),
               child: Container(
                 height: 30,
@@ -128,6 +132,7 @@ class _DetailTryAppState extends State<DetailTryApp> {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: <Widget>[
                       Padding(
+                        //tombol fathah
                         padding: const EdgeInsets.all(10),
                         child: InkWell(
                           onTap: () {
@@ -167,6 +172,7 @@ class _DetailTryAppState extends State<DetailTryApp> {
                         ),
                       ),
                       Padding(
+                        //tombol kasrah
                         padding: const EdgeInsets.all(10),
                         child: InkWell(
                           onTap: () {
@@ -207,6 +213,7 @@ class _DetailTryAppState extends State<DetailTryApp> {
                         ),
                       ),
                       Padding(
+                        //tombol dhomah
                         padding: const EdgeInsets.all(10),
                         child: InkWell(
                           onTap: () {
@@ -258,17 +265,22 @@ class _DetailTryAppState extends State<DetailTryApp> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       RichText(
-                        text: TextSpan(
-                          style: TextStyle(color: Colors.black, fontFamily: 'Montserrat'),
-                          children: <TextSpan>[
-                            TextSpan(text: "Huruf ", style: TextStyle(fontSize: 30)),
-                            TextSpan(text: widget.huruf.nama, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30)),
-                          ]
-                        )
-                        //"Huruf " + widget.huruf.nama,
-                       // style: TextStyle(
-                           // fontWeight: FontWeight.bold, fontSize: 30),
-                      ),
+                          text: TextSpan(
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontFamily: 'Montserrat'),
+                              children: <TextSpan>[
+                            TextSpan(
+                                text: "Huruf ", style: TextStyle(fontSize: 30)),
+                            TextSpan(
+                                text: widget.huruf.nama,
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold, fontSize: 30)),
+                          ])
+                          //"Huruf " + widget.huruf.nama,
+                          // style: TextStyle(
+                          // fontWeight: FontWeight.bold, fontSize: 30),
+                          ),
                       Padding(
                         padding: const EdgeInsets.only(left: 1.0, top: 5),
                         child: Text(widget.huruf.kategori),
@@ -344,15 +356,14 @@ class _DetailTryAppState extends State<DetailTryApp> {
                             Text(
                               "Play",
                               style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 20
-                              ),
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 20),
                             ),
                             Icon(
                               Icons.play_arrow,
-                                color: Colors.white,
-                                )
+                              color: Colors.white,
+                            )
                           ]),
                     ),
                   ),
@@ -362,4 +373,67 @@ class _DetailTryAppState extends State<DetailTryApp> {
           ],
         ));
   }
+}
+
+gambarFathah() {
+  return Container(
+    //fathah
+    padding: EdgeInsets.only(top: 25, left: 120),
+    child: Row(children: <Widget>[
+      Text('  َ ',
+          style: TextStyle(
+              color: Colors.black,
+              fontSize: 150,
+              fontFamily: 'DUBAI',
+              shadows: [
+                Shadow(
+                  color: Colors.black26,
+                  blurRadius: 6.0,
+                  offset: Offset(4, 4),
+                )
+              ])),
+    ]),
+  );
+}
+
+gambarDhomah() {
+  return Container(
+    //dhomah
+    padding: EdgeInsets.only(top: 30, left: 120),
+    child: Row(children: <Widget>[
+      Text('  ُ ',
+          style: TextStyle(
+              color: Colors.black,
+              fontSize: 150,
+              fontFamily: 'DUBAI',
+              shadows: [
+                Shadow(
+                  color: Colors.black26,
+                  blurRadius: 6.0,
+                  offset: Offset(4, 4),
+                )
+              ])),
+    ]),
+  );
+}
+
+gambarKasrah() {
+  return Container(
+    //kasrah
+    padding: EdgeInsets.only(top: 80, left: 120),
+    child: Row(children: <Widget>[
+      Text('  ِ ',
+          style: TextStyle(
+              color: Colors.black,
+              fontSize: 150,
+              fontFamily: 'DUBAI',
+              shadows: [
+                Shadow(
+                  color: Colors.black26,
+                  blurRadius: 6.0,
+                  offset: Offset(4, 4),
+                )
+              ])),
+    ]),
+  );
 }
