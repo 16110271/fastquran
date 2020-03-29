@@ -1,6 +1,5 @@
-//import 'package:Fast_Quran/detail.dart';
 import 'package:flutter/material.dart';
-
+import 'CustomShowDialog.dart';
 import 'detailTry.dart';
 
 class HurufModel {
@@ -12,6 +11,7 @@ class HurufModel {
   final String suaraD;
   final String karakter;
   final String tempatKeluar;
+  final String gambarMakh;
 
   HurufModel(
       {this.nama,
@@ -21,7 +21,8 @@ class HurufModel {
       this.suaraK,
       this.suaraD,
       this.karakter,
-      this.tempatKeluar});
+      this.tempatKeluar,
+      this.gambarMakh});
 }
 
 List listHuruf = [
@@ -62,6 +63,7 @@ List listHuruf = [
     karakter:
         "Menyentuhkan ujung lidah dengan diding dua gigi seri bagian atas, dengan mengalirkan suara dan nafas dengan lembut",
     tempatKeluar: "Ujung Lidah",
+    gambarMakh: 'image/aa.jpg'
   ),
   HurufModel(
     nama: "Jim",
@@ -337,9 +339,47 @@ class _DisplayListViewState extends State {
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.info_outline),
-            tooltip: 'Reset',
+            tooltip: 'Informasi',
             onPressed: () {
-              setState(() {});
+              showDialog(
+                  context: context,
+                  builder: (BuildContext context) {
+                    return CustomAlertDialog(
+                        content: SingleChildScrollView(
+                            child: ListBody(children: <Widget>[
+                          Padding(
+                            padding: const EdgeInsets.only(bottom: 20),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: <Widget>[
+                                Text('Huruf Hijaiyah',
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 20))
+                              ],
+                            ),
+                          ),
+                          Text(
+                              'Menu ini menampilkan semua huruf hijaiyah, klik salah satu huruf hijaiyah untuk mengertahui informasi secara detail menegai huruf tersebut.',
+                              textAlign: TextAlign.justify),
+                        ])),
+                        actions: <Widget>[
+                          FlatButton(
+                            child: Text(
+                              'Oke',
+                              style: TextStyle(
+                                color: Color(0xffF57c00),
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            onPressed: () {
+                              Navigator.of(context).pop();
+                            },
+                          ),
+                        ]);
+                  });
             },
           ),
         ],

@@ -2,6 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audio_cache.dart';
 import 'package:audioplayers/audioplayers.dart';
+import 'CustomShowDialog.dart';
 
 class GameTry extends StatefulWidget {
   @override
@@ -99,34 +100,42 @@ class _GameTryState extends State<GameTry> {
               showDialog(
                   context: context,
                   builder: (BuildContext context) {
-                    return AlertDialog(
-                      content: SingleChildScrollView(
-                        child: ListBody(
-                          children: <Widget>[
-                            Padding(
-                              padding: const EdgeInsets.only(bottom: 20),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                children: <Widget>[
-                                  Image.asset('image/logo.png', height: 40),
-                                ],
+                    return CustomAlertDialog(
+                        content: SingleChildScrollView(
+                            child: ListBody(children: <Widget>[
+                          Padding(
+                            padding: const EdgeInsets.only(bottom: 20),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: <Widget>[
+                                Text('Game Makhrajul Huruf',
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 20))
+                              ],
+                            ),
+                          ),
+                          Text(
+                              'Game Makhrajul Huruf ini adalah sebuah game sederhana drag and drop untuk membantu kamu belajar dimana letak tempat keluar setiap huruf. Caranya adalah dengan drag salah satu huruf yang ada di bagian bawah, lalu drop di kotak tempat huruf itu keluar.',
+                              textAlign: TextAlign.justify),
+                        ])),
+                        actions: <Widget>[
+                          FlatButton(
+                            child: Text(
+                              'Oke',
+                              style: TextStyle(
+                                color: Color(0xffF57c00),
+                                fontWeight: FontWeight.bold,
                               ),
                             ),
-                            Text(
-                              'Version 1.0 \n2020 © FastQuran',
-                              style: TextStyle(color: Colors.grey),
-                            ),
-                            Text(
-                                '\nAplikasi pengenalan huruf hijaiyah. Berisi tentang informasi huruf hijaiyah secara detail lengkap dengan cara pengucapan, dan contoh suara pelafalan dengan benar. Terdapat dua menu yaitu Informasi Detail Huruf, dan permainan drag and drop sederhana tentang tempat keluar huruf hijaiyah secara tepat.',
-                                textAlign: TextAlign.justify),
-                          ],
-                        ),
-                      ),
-                    );
-                  }
-                  );
+                            onPressed: () {
+                              Navigator.of(context).pop();
+                            },
+                          ),
+                        ]);
+                  });
             },
           )
         ],
@@ -156,10 +165,23 @@ class _GameTryState extends State<GameTry> {
           padding: const EdgeInsets.only(top: 390),
           child: Center(
             child: Container(
-                height: 300,
+              // color: Colors.blueGrey,
+                height: MediaQuery.of(context).size.height * 0.4,
                 width: MediaQuery.of(context).size.width,
                 child: ListView(
                   children: <Widget>[
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 10, top: 10),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: <Widget>[
+                          Text('Huruf Hijaiyah',
+                              style: TextStyle(
+                                  fontSize: 20, fontWeight: FontWeight.bold))
+                        ],
+                      ),
+                    ),
                     tombolHijaiyah(),
                   ],
                 )),
@@ -517,6 +539,7 @@ class _GameTryState extends State<GameTry> {
 
   _firstBox() {
     return Container(
+      //color: Colors.blueGrey,
         child: Column(
       children: <Widget>[
         Padding(
@@ -524,6 +547,32 @@ class _GameTryState extends State<GameTry> {
           child: Row(
             //baris 1
             children: <Widget>[
+              Container(
+                height: 25,
+                width: 25,
+                child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: <Widget>[
+                      Text('1',
+                          style: TextStyle(
+                              color: Colors.white, fontWeight: FontWeight.bold))
+                    ]),
+                decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black26,
+                        blurRadius: 6.0,
+                        offset: Offset(2, 2),
+                      )
+                    ],
+                    border: Border.all(
+                      width: 3,
+                      color: const Color(0xFFFFFFFF),
+                    ),
+                    color: Color(0xffF57c00),
+                    shape: BoxShape.circle),
+              ),
               targetHuruf[16] == false ? widgetKotak(16) : dragableBox('ط'),
               targetHuruf[8] == false ? widgetKotak(8) : dragableBox('د'),
               targetHuruf[3] == false ? widgetKotak(3) : dragableBox('ت'),
@@ -535,6 +584,32 @@ class _GameTryState extends State<GameTry> {
           child: Row(
             //baris 2
             children: <Widget>[
+              Container(
+                height: 25,
+                width: 25,
+                child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: <Widget>[
+                      Text('2',
+                          style: TextStyle(
+                              color: Colors.white, fontWeight: FontWeight.bold))
+                    ]),
+                decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black26,
+                        blurRadius: 6.0,
+                        offset: Offset(2, 2),
+                      )
+                    ],
+                    border: Border.all(
+                      width: 3,
+                      color: const Color(0xFFFFFFFF),
+                    ),
+                    color: Color(0xffF57c00),
+                    shape: BoxShape.circle),
+              ),
               targetHuruf[17] == false ? widgetKotak(17) : dragableBox('ظ'),
               targetHuruf[9] == false ? widgetKotak(9) : dragableBox('ذ'),
               targetHuruf[4] == false ? widgetKotak(4) : dragableBox('ث'),
@@ -546,6 +621,32 @@ class _GameTryState extends State<GameTry> {
           child: Row(
             //baris 3
             children: <Widget>[
+              Container(
+                height: 25,
+                width: 25,
+                child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: <Widget>[
+                      Text('3',
+                          style: TextStyle(
+                              color: Colors.white, fontWeight: FontWeight.bold))
+                    ]),
+                decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black26,
+                        blurRadius: 6.0,
+                        offset: Offset(2, 2),
+                      )
+                    ],
+                    border: Border.all(
+                      width: 3,
+                      color: const Color(0xFFFFFFFF),
+                    ),
+                    color: Color(0xffF57c00),
+                    shape: BoxShape.circle),
+              ),
               targetHuruf[26] == false ? widgetKotak(26) : dragableBox('و'),
               targetHuruf[2] == false ? widgetKotak(2) : dragableBox('ب'),
               targetHuruf[24] == false ? widgetKotak(24) : dragableBox('م'),
@@ -558,6 +659,32 @@ class _GameTryState extends State<GameTry> {
           child: Row(
             //baris 4
             children: <Widget>[
+              Container(
+                height: 25,
+                width: 25,
+                child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: <Widget>[
+                      Text('4',
+                          style: TextStyle(
+                              color: Colors.white, fontWeight: FontWeight.bold))
+                    ]),
+                decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black26,
+                        blurRadius: 6.0,
+                        offset: Offset(2, 2),
+                      )
+                    ],
+                    border: Border.all(
+                      width: 3,
+                      color: const Color(0xFFFFFFFF),
+                    ),
+                    color: Color(0xffF57c00),
+                    shape: BoxShape.circle),
+              ),
               targetHuruf[14] == false ? widgetKotak(14) : dragableBox('ص'),
               targetHuruf[11] == false ? widgetKotak(11) : dragableBox('ز'),
               targetHuruf[12] == false ? widgetKotak(12) : dragableBox('س'),
@@ -624,10 +751,36 @@ class _GameTryState extends State<GameTry> {
         Padding(
           padding: const EdgeInsets.only(top: 50, right: 10),
           child: Row(
-            crossAxisAlignment: CrossAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.end,
             //baris 1
             children: <Widget>[
+              Container(
+                height: 25,
+                width: 25,
+                child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: <Widget>[
+                      Text('5',
+                          style: TextStyle(
+                              color: Colors.white, fontWeight: FontWeight.bold))
+                    ]),
+                decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black26,
+                        blurRadius: 6.0,
+                        offset: Offset(2, 2),
+                      )
+                    ],
+                    border: Border.all(
+                      width: 3,
+                      color: const Color(0xFFFFFFFF),
+                    ),
+                    color: Color(0xffF57c00),
+                    shape: BoxShape.circle),
+              ),
               targetHuruf[22] == false ? widgetKotak(22) : dragableBox('ك'),
               targetHuruf[21] == false ? widgetKotak(21) : dragableBox('ق'),
             ],
@@ -636,10 +789,36 @@ class _GameTryState extends State<GameTry> {
         Padding(
           padding: const EdgeInsets.only(top: 10, right: 10),
           child: Row(
-            crossAxisAlignment: CrossAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.end,
             //baris 2
             children: <Widget>[
+              Container(
+                height: 25,
+                width: 25,
+                child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: <Widget>[
+                      Text('6',
+                          style: TextStyle(
+                              color: Colors.white, fontWeight: FontWeight.bold))
+                    ]),
+                decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black26,
+                        blurRadius: 6.0,
+                        offset: Offset(2, 2),
+                      )
+                    ],
+                    border: Border.all(
+                      width: 3,
+                      color: const Color(0xFFFFFFFF),
+                    ),
+                    color: Color(0xffF57c00),
+                    shape: BoxShape.circle),
+              ),
               targetHuruf[7] == false ? widgetKotak(7) : dragableBox('خ'),
               targetHuruf[19] == false ? widgetKotak(19) : dragableBox('غ'),
             ],
@@ -648,10 +827,36 @@ class _GameTryState extends State<GameTry> {
         Padding(
           padding: const EdgeInsets.only(top: 10, right: 10),
           child: Row(
-            crossAxisAlignment: CrossAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.end,
             //baris 3
             children: <Widget>[
+              Container(
+                height: 25,
+                width: 25,
+                child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: <Widget>[
+                      Text('7',
+                          style: TextStyle(
+                              color: Colors.white, fontWeight: FontWeight.bold))
+                    ]),
+                decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black26,
+                        blurRadius: 6.0,
+                        offset: Offset(2, 2),
+                      )
+                    ],
+                    border: Border.all(
+                      width: 3,
+                      color: const Color(0xFFFFFFFF),
+                    ),
+                    color: Color(0xffF57c00),
+                    shape: BoxShape.circle),
+              ),
               targetHuruf[6] == false ? widgetKotak(6) : dragableBox('ح'),
               targetHuruf[18] == false ? widgetKotak(18) : dragableBox('ع'),
             ],
@@ -660,10 +865,36 @@ class _GameTryState extends State<GameTry> {
         Padding(
           padding: const EdgeInsets.only(top: 10, right: 10),
           child: Row(
-            crossAxisAlignment: CrossAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.end,
             //baris 4
             children: <Widget>[
+              Container(
+                height: 25,
+                width: 25,
+                child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: <Widget>[
+                      Text('3',
+                          style: TextStyle(
+                              color: Colors.white, fontWeight: FontWeight.bold))
+                    ]),
+                decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black26,
+                        blurRadius: 6.0,
+                        offset: Offset(2, 2),
+                      )
+                    ],
+                    border: Border.all(
+                      width: 3,
+                      color: const Color(0xFFFFFFFF),
+                    ),
+                    color: Color(0xffF57c00),
+                    shape: BoxShape.circle),
+              ),
               targetHuruf[27] == false ? widgetKotak(27) : dragableBox('ھـ'),
               targetHuruf[1] == false ? widgetKotak(1) : dragableBox('ا'),
             ],
@@ -718,77 +949,95 @@ class _GameTryState extends State<GameTry> {
                 }
 
                 if (completed == true) {
+                  audioCache.play('correct.mp3');
                   showDialog(
-                  context: context,
-                  builder: (BuildContext context) {
-                    return AlertDialog(
-                      content: SingleChildScrollView(
-                        child: ListBody(
-                          children: <Widget>[
-                            Padding(
-                              padding: const EdgeInsets.only(bottom: 20),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                children: <Widget>[
-                                  Image.asset('image/logo.png', height: 40),
-                                ],
-                              ),
+                      context: context,
+                      builder: (BuildContext context) {
+                        return CustomAlertDialog(
+                          content: SingleChildScrollView(
+                            child: ListBody(
+                              children: <Widget>[
+                                Padding(
+                                  padding: const EdgeInsets.only(bottom: 10),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    mainAxisSize: MainAxisSize.max,
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: <Widget>[
+                                      Center(
+                                          child: Text('Alhamdulillah',
+                                              style: TextStyle(
+                                                  fontWeight: FontWeight.bold,
+                                                  fontSize: 30))),
+                                    ],
+                                  ),
+                                ),
+                                Text(
+                                    'Kamu telah berhasil menyelesaikan game ini, dan kamu telah mengetahui tempat keluar huruf secara tepat! ',
+                                    textAlign: TextAlign.center),
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 20.0),
+                                  child: Container(
+                                    height: 50,
+                                    decoration: new BoxDecoration(
+                                      color: const Color(
+                                          0xffF57c00), //Color(0xFF33b17c),
+                                    ),
+                                    child: Center(
+                                      child: new Text(
+                                        'Alhamdulillah',
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 18.0,
+                                        ),
+                                        textAlign: TextAlign.center,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
                             ),
-                            Text(
-                              'Version 1.0 \n2020 © FastQuran',
-                              style: TextStyle(color: Colors.grey),
-                            ),
-                            Text(
-                                '\nAplikasi pengenalan huruf hijaiyah. Berisi tentang informasi huruf hijaiyah secara detail lengkap dengan cara pengucapan, dan contoh suara pelafalan dengan benar. Terdapat dua menu yaitu Informasi Detail Huruf, dan permainan drag and drop sederhana tentang tempat keluar huruf hijaiyah secara tepat.',
-                                textAlign: TextAlign.justify),
-                          ],
-                        ),
-                      ),
-                    );
-                  }
-                  );
-                                                    }
-                                                  });
-                                                  audioCache.play('correct.mp3');
-                                    
-                                                  scaffoldKey.currentState.showSnackBar(SnackBar(
-                                                    content: Text("✓ Tepat Sekali! ",
-                                                        style: TextStyle(
-                                                            fontWeight: FontWeight.bold, color: Colors.white)),
-                                                    backgroundColor: Color(0xff86c933),
-                                                    duration: Duration(milliseconds: 1000),
-                                                  ));
-                                                } else {
-                                                  audioCache.play('incorrect.mp3');
-                                                  scaffoldKey.currentState.showSnackBar(SnackBar(
-                                                    content: Text("✕ Kurang Tepat!",
-                                                        style: TextStyle(
-                                                            fontWeight: FontWeight.bold, color: Colors.white)),
-                                                    backgroundColor: Color(0xffd32f2f),
-                                                    duration: Duration(milliseconds: 1000),
-                                                  ));
-                                                }
-                                              },
-                                            ),
-                                          ),
-                                        );
-                                      }
-                                    
-                                      Padding dragKosong() {
-                                        return Padding(
-                                          padding: const EdgeInsets.all(7),
-                                          child: Container(
-                                              height: 50,
-                                              width: 50,
-                                              decoration: BoxDecoration(
-                                                color: Colors.black12,
-                                                borderRadius: BorderRadius.all(Radius.circular(6)),
-                                              )),
-                                        );
-                                      }
-                                    
-                                     
-                  }
-                  
+                          ),
+                        );
+                      });
+                }
+              });
+              audioCache.play('correct.mp3');
+
+              scaffoldKey.currentState.showSnackBar(SnackBar(
+                content: Text("✓ Tepat Sekali! ",
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold, color: Colors.white)),
+                backgroundColor: Color(0xff86c933),
+                duration: Duration(milliseconds: 1000),
+              ));
+            } else {
+              audioCache.play('incorrect.mp3');
+              scaffoldKey.currentState.showSnackBar(SnackBar(
+                content: Text("✕ Kurang Tepat!",
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold, color: Colors.white)),
+                backgroundColor: Color(0xffd32f2f),
+                duration: Duration(milliseconds: 1000),
+              ));
+            }
+          },
+        ),
+      ),
+    );
+  }
+
+  Padding dragKosong() {
+    return Padding(
+      padding: const EdgeInsets.all(7),
+      child: Container(
+          height: 50,
+          width: 50,
+          decoration: BoxDecoration(
+            color: Colors.black12,
+            borderRadius: BorderRadius.all(Radius.circular(6)),
+          )),
+    );
+  }
+}

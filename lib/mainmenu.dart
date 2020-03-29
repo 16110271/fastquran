@@ -3,6 +3,7 @@
 import 'package:Fast_Quran/gameTry.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
+import 'CustomShowDialog.dart';
 
 import 'HurufModel.dart';
 
@@ -84,7 +85,7 @@ class _MainMenuState extends State<MainMenu> {
                           showDialog(
                               context: context,
                               builder: (BuildContext context) {
-                                return AlertDialog(
+                                return CustomAlertDialog(
                                   content: SingleChildScrollView(
                                     child: ListBody(
                                       children: <Widget>[

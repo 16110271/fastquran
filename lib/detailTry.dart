@@ -1,8 +1,8 @@
-//import 'package:Fast_Quran/HurufModelGrid.dart';
 import 'package:audioplayers/audio_cache.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'HurufModel.dart';
+import 'CustomShowDialog.dart';
 
 typedef void OnError(Exception exception);
 
@@ -111,12 +111,48 @@ class _DetailTryAppState extends State<DetailTryApp> {
                         iconSize: 30,
                         color: Colors.black,
                         onPressed: () {
-                          Navigator.pushReplacement(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => DisplayListView(),
-                            ),
-                          );
+                          showDialog(
+                              context: context,
+                              builder: (BuildContext context) {
+                                return CustomAlertDialog(
+                                    content: SingleChildScrollView(
+                                        child: ListBody(children: <Widget>[
+                                      Padding(
+                                        padding:
+                                            const EdgeInsets.only(bottom: 20),
+                                        child: Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.start,
+                                          children: <Widget>[
+                                            Text('Detail Huruf Hijaiyah',
+                                                style: TextStyle(
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 20))
+                                          ],
+                                        ),
+                                      ),
+                                      Text(
+                                          'Pada halaman ini menampilkan informasi huruf hijaiyah secara detail. Terdapat tiga pilihan harokat yaitu fathah, kasrah, dhomah. Masing masing tombol akan menampilkan gambar harokat pada huruf tersebut dan akan mengaktifkan suara huruf sesuai harokat yang sudah dipilih, klik tombol Play untuk memainkan suara. ',
+                                          textAlign: TextAlign.justify),
+                                    ])),
+                                    actions: <Widget>[
+                                      FlatButton(
+                                        child: Text(
+                                          'Oke',
+                                          style: TextStyle(
+                                            color: Color(0xffF57c00),
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                        onPressed: () {
+                                          Navigator.of(context).pop();
+                                        },
+                                      ),
+                                    ]);
+                              });
                         },
                       ),
                     ],
@@ -258,7 +294,7 @@ class _DetailTryAppState extends State<DetailTryApp> {
               padding: const EdgeInsets.only(top: 360),
               child: Container(
                 width: MediaQuery.of(context).size.width,
-                height: 400,
+                height: MediaQuery.of(context).size.height * 0.5,
                 child: Padding(
                   padding: const EdgeInsets.only(left: 20, top: 30),
                   child: Column(
@@ -365,6 +401,43 @@ class _DetailTryAppState extends State<DetailTryApp> {
                               color: Colors.white,
                             )
                           ]),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 480, right: 15),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: <Widget>[
+                  Container(
+                    child: IconButton(
+                      icon: Icon(Icons.crop_original),
+                      iconSize: 30,
+                      color: Colors.black,
+                      onPressed: () {
+                        showDialog(
+                            context: context,
+                            builder: (BuildContext context) {
+                              return CustomAlertDialog(
+                                  content: Image.asset(widget.huruf.gambarMakh),
+                                  actions: <Widget>[
+                                    FlatButton(
+                                      child: Text(
+                                        'Oke',
+                                        style: TextStyle(
+                                          color: Color(0xffF57c00),
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                      onPressed: () {
+                                        Navigator.of(context).pop();
+                                      },
+                                    ),
+                                  ]);
+                            });
+                      },
                     ),
                   ),
                 ],
