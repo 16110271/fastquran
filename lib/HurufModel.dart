@@ -34,37 +34,40 @@ List listHuruf = [
       suaraK: "eventually.mp3",
       suaraD: "moonless.mp3",
       karakter: "Melafalkan huruf alif sama dengan melafalkan huruf a latin",
-      tempatKeluar: "Pangkal Tenggorokan"),
+      tempatKeluar: "Pangkal Tenggorokan",
+      gambarMakh: 'image/aa.jpg'),
   HurufModel(
-    nama: "Ba",
-    kategori: "Huruf Bibir",
-    gambar: "ب",
-    suaraF: "audio.mp3",
-    suaraK: "eventually.mp3",
-    suaraD: "moonless.mp3",
-    karakter: "Merapatkan kedua bibir, tidak ada angin yang keluar",
-    tempatKeluar: "Bibir",
-  ),
+      nama: "Ba",
+      kategori: "Huruf Bibir",
+      gambar: "ب",
+      suaraF: "audio.mp3",
+      suaraK: "eventually.mp3",
+      suaraD: "moonless.mp3",
+      karakter: "Merapatkan kedua bibir, tidak ada angin yang keluar",
+      tempatKeluar: "Bibir",
+      gambarMakh: 'image/aa.jpg'),
   HurufModel(
-    nama: "Ta",
-    kategori: "Huruf Lidah",
-    gambar: "ت",
-    karakter:
-        "Menyentuhkan lidah ke gigi seri bagian atas, dengan mengalirkan sedikit nafas",
-    tempatKeluar: "Ujung Lidah",
-  ),
+      nama: "Ta",
+      kategori: "Huruf Lidah",
+      gambar: "ت",
+      suaraF: "audio.mp3",
+      suaraK: "eventually.mp3",
+      suaraD: "moonless.mp3",
+      karakter:
+          "Menyentuhkan lidah ke gigi seri bagian atas, dengan mengalirkan sedikit nafas",
+      tempatKeluar: "Ujung Lidah",
+      gambarMakh: 'image/aa.jpg'),
   HurufModel(
-    nama: "Tsa",
-    kategori: "Huruf Lidah",
-    gambar: "ث",
-    suaraF: "audio.mp3",
-    suaraK: "eventually.mp3",
-    suaraD: "moonless.mp3",
-    karakter:
-        "Menyentuhkan ujung lidah dengan diding dua gigi seri bagian atas, dengan mengalirkan suara dan nafas dengan lembut",
-    tempatKeluar: "Ujung Lidah",
-    gambarMakh: 'image/aa.jpg'
-  ),
+      nama: "Tsa",
+      kategori: "Huruf Lidah",
+      gambar: "ث",
+      suaraF: "audio.mp3",
+      suaraK: "eventually.mp3",
+      suaraD: "moonless.mp3",
+      karakter:
+          "Menyentuhkan ujung lidah dengan diding dua gigi seri bagian atas, dengan mengalirkan suara dan nafas dengan lembut",
+      tempatKeluar: "Ujung Lidah",
+      gambarMakh: 'image/aa.jpg'),
   HurufModel(
     nama: "Jim",
     kategori: "Huruf Lidah",
@@ -74,6 +77,7 @@ List listHuruf = [
     suaraD: "moonless.mp3",
     karakter: "Menyentuhkan tengah lidah dengan langit langit",
     tempatKeluar: "Tengah Lidah",
+      gambarMakh: 'image/aa.jpg',
   ),
   HurufModel(
     nama: "Kha",
@@ -85,6 +89,7 @@ List listHuruf = [
     karakter:
         "Seperti akhiran dalam melafalkan kata 'ayah'. Bersih tidak ada serak",
     tempatKeluar: "Tengah Tenggorokan",
+    gambarMakh: 'image/aa.jpg',
   ),
   HurufModel(
     nama: "Kho",
@@ -95,6 +100,7 @@ List listHuruf = [
     suaraD: "moonless.mp3",
     karakter: "Seperti suara orang sedang mendengkur. Suara terdengar serak",
     tempatKeluar: "Ujung Tenggorokan",
+    gambarMakh: 'image/aa.jpg',
   ),
   HurufModel(
     nama: "Dal",
@@ -105,6 +111,7 @@ List listHuruf = [
     suaraD: "moonless.mp3",
     karakter: "menyentuhkan ujung lidah ke gusi bagian atas",
     tempatKeluar: "Ujung Lidah",
+    gambarMakh: 'image/aa.jpg',
   ),
   HurufModel(
     nama: "Dzal",
@@ -116,6 +123,7 @@ List listHuruf = [
     karakter:
         "Menyentuhkan ujung lidah dengan dinding dua gigi seri bagian atas. Tanpa mengalirnya udara",
     tempatKeluar: "Ujung Lidah",
+    gambarMakh: 'image/aa.jpg',
   ),
   HurufModel(
     nama: "Ra",
@@ -126,6 +134,7 @@ List listHuruf = [
     suaraD: "moonless.mp3",
     karakter: "Menyentuhkan lidah terdepan dengan langit-langit bagian depan",
     tempatKeluar: "Ujung Lidah",
+    gambarMakh: 'image/aa.jpg',
   ),
   HurufModel(
     nama: "Zain",
@@ -136,7 +145,7 @@ List listHuruf = [
     suaraD: "moonless.mp3",
     karakter:
         "Ujung lisan hampir diatas gigi seri bagian bawah. Tanpa mengalirnya udara. Mirip dengan suara dengungan tawon.",
-    tempatKeluar: "Ujung Lidah",
+    tempatKeluar: "Ujung Lidah",gambarMakh: 'image/aa.jpg',
   ),
   HurufModel(
     nama: "Sin",
@@ -147,7 +156,7 @@ List listHuruf = [
     suaraD: "moonless.mp3",
     karakter:
         "Bagian lidah terdekat hampir di atas dua gigi seri bagian bawah. Diiringi mengalirnya nafas.",
-    tempatKeluar: "Ujung Lidah",
+    tempatKeluar: "Ujung Lidah",gambarMakh: 'image/aa.jpg',
   ),
   HurufModel(
     nama: "Shin",
@@ -158,7 +167,7 @@ List listHuruf = [
     suaraD: "moonless.mp3",
     karakter:
         "menyentuhkan tengah lidah dengan langit langit, mengalir dan menyebar udara dan nafasnya.",
-    tempatKeluar: "Tengah Lidah",
+    tempatKeluar: "Tengah Lidah",gambarMakh: 'image/aa.jpg',
   ),
   HurufModel(
     nama: "Shod",
@@ -169,7 +178,7 @@ List listHuruf = [
     suaraD: "moonless.mp3",
     karakter:
         "Bagian pangkal lidah terangkat dan bagian depan menutupi langit-langit, diiringi mengalirnya nafas dan Suara menebal",
-    tempatKeluar: "Ujung Lidah",
+    tempatKeluar: "Ujung Lidah",gambarMakh: 'image/aa.jpg',
   ),
   HurufModel(
     nama: "Dhod",
@@ -180,7 +189,7 @@ List listHuruf = [
     suaraD: "moonless.mp3",
     karakter:
         "Menyentuhkan dua atau salah satu sisi bagian lisan dengan gigi geraham atas",
-    tempatKeluar: "Pangkal Tepi Lidah",
+    tempatKeluar: "Pangkal Tepi Lidah",gambarMakh: 'image/aa.jpg',
   ),
   HurufModel(
     nama: "Tho",
@@ -191,7 +200,7 @@ List listHuruf = [
     suaraD: "moonless.mp3",
     karakter:
         "Menyentuhkan ujung lidah dengan tempat tumbuhnya 2 gigi seri bagian atas, tidak ada aliran nafas, dan diucapkan dengan suara menebal",
-    tempatKeluar: "Ujung Lidah",
+    tempatKeluar: "Ujung Lidah",gambarMakh: 'image/aa.jpg',
   ),
   HurufModel(
     nama: "Dhold",
@@ -202,7 +211,7 @@ List listHuruf = [
     suaraD: "moonless.mp3",
     karakter:
         "Menyentuhkan ujung lidah dengan dinding dua gigi seri bagian atas. Tanpa mengalirnya udara. Suara tebal, mengangkat pangkal lidah dan bagian depan menutup langit-langit",
-    tempatKeluar: "Ujung Lidah",
+    tempatKeluar: "Ujung Lidah",gambarMakh: 'image/aa.jpg',
   ),
   HurufModel(
     nama: "'Ain",
@@ -213,7 +222,7 @@ List listHuruf = [
     suaraD: "moonless.mp3",
     karakter:
         "Menyerupai pengucapan huruf 'a' dengan suara berasal dari tenggorokan. Seperti suara tangisan bayi. Tidak mendengung",
-    tempatKeluar: "Tengah Tenggorokan",
+    tempatKeluar: "Tengah Tenggorokan",gambarMakh: 'image/aa.jpg',
   ),
   HurufModel(
     nama: "Ghoin",
@@ -224,7 +233,7 @@ List listHuruf = [
     suaraD: "moonless.mp3",
     karakter:
         "Keluar dari tenggorokan yang terdekat dari rongga mulut, tanpa mengalir udaranya, tanpa ada serak",
-    tempatKeluar: "Ujung Tenggorokan",
+    tempatKeluar: "Ujung Tenggorokan",gambarMakh: 'image/aa.jpg',
   ),
   HurufModel(
     nama: "Fa'",
@@ -235,7 +244,7 @@ List listHuruf = [
     suaraD: "moonless.mp3",
     karakter:
         "Menyentuhkan ujung dua gigi seri bagian atas dengan bibir bawah bagian dalam dan mengalirnya udara",
-    tempatKeluar: "Bibir",
+    tempatKeluar: "Bibir",gambarMakh: 'image/aa.jpg',
   ),
   HurufModel(
     nama: "Qof",
@@ -245,7 +254,7 @@ List listHuruf = [
     suaraK: "eventually.mp3",
     suaraD: "moonless.mp3",
     karakter: "Menyentuhkan pangkal lidah dengan langit langit bagian belakang",
-    tempatKeluar: "Pangkal Lidah",
+    tempatKeluar: "Pangkal Lidah",gambarMakh: 'image/aa.jpg',
   ),
   HurufModel(
     nama: "Kaf",
@@ -256,7 +265,7 @@ List listHuruf = [
     suaraD: "moonless.mp3",
     karakter:
         "Menyentuhkan pangkal lidah dengan langit-langit bagian belakang, dengan mengalirkan udara dengan lembut",
-    tempatKeluar: "Pangkal Lidah",
+    tempatKeluar: "Pangkal Lidah",gambarMakh: 'image/aa.jpg',
   ),
   HurufModel(
     nama: "Lam",
@@ -266,7 +275,7 @@ List listHuruf = [
     suaraK: "eventually.mp3",
     suaraD: "moonless.mp3",
     karakter: "Menyentuhkan lidah terdekat dengan langit-langit bagian depan",
-    tempatKeluar: "Ujung Lidah",
+    tempatKeluar: "Ujung Lidah",gambarMakh: 'image/aa.jpg',
   ),
   HurufModel(
     nama: "Mim",
@@ -276,7 +285,7 @@ List listHuruf = [
     suaraK: "eventually.mp3",
     suaraD: "moonless.mp3",
     karakter: "Merapatkan kedua bibir, tidak ada angin yang keluar",
-    tempatKeluar: "Bibir",
+    tempatKeluar: "Bibir",gambarMakh: 'image/aa.jpg',
   ),
   HurufModel(
     nama: "Nun",
@@ -286,7 +295,7 @@ List listHuruf = [
     suaraK: "eventually.mp3",
     suaraD: "moonless.mp3",
     karakter: "Menyentuhkan lidah terdekat dengan langit-langit bagian depan",
-    tempatKeluar: "Ujung Lidah",
+    tempatKeluar: "Ujung Lidah",gambarMakh: 'image/aa.jpg',
   ),
   HurufModel(
     nama: "Ha",
@@ -297,7 +306,7 @@ List listHuruf = [
     suaraD: "moonless.mp3",
     karakter:
         "Keluar dari tenggorokan yang terjauh. Seperti ucapan saat kita mempunyai ide 'Aha!'",
-    tempatKeluar: "Pangkal Tenggorokan",
+    tempatKeluar: "Pangkal Tenggorokan",gambarMakh: 'image/aa.jpg',
   ),
   HurufModel(
     nama: "Wauw",
@@ -307,7 +316,7 @@ List listHuruf = [
     suaraK: "eventually.mp3",
     suaraD: "moonless.mp3",
     karakter: "Dengan menyatukan dua bibir kedepan",
-    tempatKeluar: "Bibir",
+    tempatKeluar: "Bibir",gambarMakh: 'image/aa.jpg',
   ),
   HurufModel(
     nama: "Ya'",
@@ -317,7 +326,7 @@ List listHuruf = [
     suaraK: "eventually.mp3",
     suaraD: "moonless.mp3",
     karakter: "Bagian Tengah lidah disentuhkan dengan langit-langit",
-    tempatKeluar: "Tengah  Lidah",
+    tempatKeluar: "Tengah  Lidah",gambarMakh: 'image/aa.jpg',
   ),
 ];
 
@@ -385,106 +394,107 @@ class _DisplayListViewState extends State {
         ],
       ),
       body: Container(
-        child: Directionality(
-      textDirection: TextDirection.rtl,
-      child: new GridView.builder(
-          itemCount: listHuruf.length,
-          gridDelegate:
-              new SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3, 
-                childAspectRatio: 16/20),
-          itemBuilder: (context, int i) {
-            return new GestureDetector(
-              child: Padding(
-                padding: const EdgeInsets.all(8),
-                child: new Container(
-                    height: 100,
-                    width: 200,
-                    child: Column(
-                      children: <Widget>[
-                        Container(
-                          alignment: Alignment.center,
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Column(
-                              children: <Widget>[
-                                new Text(listHuruf[i].gambar,
-                                    style: TextStyle(
-                                      fontSize: 60,
-                                      fontFamily: 'DUBAI',
-                                    )),
-                              ],
+          child: Directionality(
+        textDirection: TextDirection.rtl,
+        child: new GridView.builder(
+            itemCount: listHuruf.length,
+            gridDelegate: new SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 3, childAspectRatio: 16 / 20),
+            itemBuilder: (context, int i) {
+              return new GestureDetector(
+                child: Padding(
+                  padding: const EdgeInsets.all(8),
+                  child: new Container(
+                      height: 100,
+                      width: 200,
+                      child: Column(
+                        children: <Widget>[
+                          Container(
+                            alignment: Alignment.center,
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Column(
+                                children: <Widget>[
+                                  new Text(listHuruf[i].gambar,
+                                      style: TextStyle(
+                                        fontSize: 60,
+                                        fontFamily: 'DUBAI',
+                                      )),
+                                ],
+                              ),
                             ),
                           ),
-                        ),
-                        Directionality(
-                          textDirection: TextDirection.ltr,
-                          child: Container(
-                            // color: Colors.blueGrey,
-                            width: 90,
-                              child: Padding(
-                                padding: const EdgeInsets.only(top:2.0),
-                                child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                                new Text(listHuruf[i].nama,
-                                    style:
-                                        TextStyle(fontWeight: FontWeight.bold, fontSize: 15)),
-                                new Text(listHuruf[i].kategori,
-                                    style: TextStyle(fontSize: 10)),
-                            ],
-                          ),
-                              )),
-                        )
-                      ],
-                    ),
-                    decoration: BoxDecoration(
-                      color: Color(0xffFFFFFF),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.black26,
-                          blurRadius: 6.0,
-                          offset: Offset(2, 2),
-                        )
-                      ],
-                      borderRadius: BorderRadius.all(Radius.circular(6)),
-                    )),
-              ),
-              onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => DetailTryApp(
-                              huruf: listHuruf[i],
-                            )));
-              },
-            );
-          }),
-    )
-        // child: ListView.builder(
-        //   itemCount: listHuruf.length,
-        //   itemBuilder: (context, int i) => Column(
-        //     children: [
-        //       new ListTile(
-        //         title: new Text(
-        //           listHuruf[i].nama,
-        //           style: TextStyle(fontWeight: FontWeight.bold),
-        //         ),
-        //         subtitle: new Text(listHuruf[i].kategori),
-        //         trailing: new Text(listHuruf[i].gambar,
-        //             style: TextStyle(fontFamily: 'DUBAI', fontSize: 30)),
-        //         onTap: () {
-        //           Navigator.push(
-        //               context,
-        //               MaterialPageRoute(
-        //                   builder: (context) => DetailTryApp(
-        //                         huruf: listHuruf[i],
-        //                       )));
-        //         },
-        //       ),
-        //     ],
-        //   ),
-        // ),
-      ),
+                          Directionality(
+                            textDirection: TextDirection.ltr,
+                            child: Container(
+                                // color: Colors.blueGrey,
+                                width: 90,
+                                child: Padding(
+                                  padding: const EdgeInsets.only(top: 2.0),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: <Widget>[
+                                      new Text(listHuruf[i].nama,
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 15)),
+                                      new Text(listHuruf[i].kategori,
+                                          style: TextStyle(fontSize: 10)),
+                                    ],
+                                  ),
+                                )),
+                          )
+                        ],
+                      ),
+                      decoration: BoxDecoration(
+                        color: Color(0xffFFFFFF),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black26,
+                            blurRadius: 6.0,
+                            offset: Offset(2, 2),
+                          )
+                        ],
+                        borderRadius: BorderRadius.all(Radius.circular(6)),
+                      )),
+                ),
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => DetailTryApp(
+                                huruf: listHuruf[i],
+                              )));
+                },
+              );
+            }),
+      )
+          // child: ListView.builder(
+          //   itemCount: listHuruf.length,
+          //   itemBuilder: (context, int i) => Column(
+          //     children: [
+          //       new ListTile(
+          //         title: new Text(
+          //           listHuruf[i].nama,
+          //           style: TextStyle(fontWeight: FontWeight.bold),
+          //         ),
+          //         subtitle: new Text(listHuruf[i].kategori),
+          //         trailing: new Text(listHuruf[i].gambar,
+          //             style: TextStyle(fontFamily: 'DUBAI', fontSize: 30)),
+          //         onTap: () {
+          //           Navigator.push(
+          //               context,
+          //               MaterialPageRoute(
+          //                   builder: (context) => DetailTryApp(
+          //                         huruf: listHuruf[i],
+          //                       )));
+          //         },
+          //       ),
+          //     ],
+          //   ),
+          // ),
+          ),
     );
   }
 }
