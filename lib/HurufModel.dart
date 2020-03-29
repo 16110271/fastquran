@@ -77,7 +77,7 @@ List listHuruf = [
     suaraD: "moonless.mp3",
     karakter: "Menyentuhkan tengah lidah dengan langit langit",
     tempatKeluar: "Tengah Lidah",
-      gambarMakh: 'image/aa.jpg',
+    gambarMakh: 'image/aa.jpg',
   ),
   HurufModel(
     nama: "Kha",
@@ -145,7 +145,8 @@ List listHuruf = [
     suaraD: "moonless.mp3",
     karakter:
         "Ujung lisan hampir diatas gigi seri bagian bawah. Tanpa mengalirnya udara. Mirip dengan suara dengungan tawon.",
-    tempatKeluar: "Ujung Lidah",gambarMakh: 'image/aa.jpg',
+    tempatKeluar: "Ujung Lidah",
+    gambarMakh: 'image/aa.jpg',
   ),
   HurufModel(
     nama: "Sin",
@@ -156,7 +157,8 @@ List listHuruf = [
     suaraD: "moonless.mp3",
     karakter:
         "Bagian lidah terdekat hampir di atas dua gigi seri bagian bawah. Diiringi mengalirnya nafas.",
-    tempatKeluar: "Ujung Lidah",gambarMakh: 'image/aa.jpg',
+    tempatKeluar: "Ujung Lidah",
+    gambarMakh: 'image/aa.jpg',
   ),
   HurufModel(
     nama: "Shin",
@@ -167,7 +169,8 @@ List listHuruf = [
     suaraD: "moonless.mp3",
     karakter:
         "menyentuhkan tengah lidah dengan langit langit, mengalir dan menyebar udara dan nafasnya.",
-    tempatKeluar: "Tengah Lidah",gambarMakh: 'image/aa.jpg',
+    tempatKeluar: "Tengah Lidah",
+    gambarMakh: 'image/aa.jpg',
   ),
   HurufModel(
     nama: "Shod",
@@ -178,7 +181,8 @@ List listHuruf = [
     suaraD: "moonless.mp3",
     karakter:
         "Bagian pangkal lidah terangkat dan bagian depan menutupi langit-langit, diiringi mengalirnya nafas dan Suara menebal",
-    tempatKeluar: "Ujung Lidah",gambarMakh: 'image/aa.jpg',
+    tempatKeluar: "Ujung Lidah",
+    gambarMakh: 'image/aa.jpg',
   ),
   HurufModel(
     nama: "Dhod",
@@ -189,7 +193,8 @@ List listHuruf = [
     suaraD: "moonless.mp3",
     karakter:
         "Menyentuhkan dua atau salah satu sisi bagian lisan dengan gigi geraham atas",
-    tempatKeluar: "Pangkal Tepi Lidah",gambarMakh: 'image/aa.jpg',
+    tempatKeluar: "Pangkal Tepi Lidah",
+    gambarMakh: 'image/aa.jpg',
   ),
   HurufModel(
     nama: "Tho",
@@ -200,7 +205,8 @@ List listHuruf = [
     suaraD: "moonless.mp3",
     karakter:
         "Menyentuhkan ujung lidah dengan tempat tumbuhnya 2 gigi seri bagian atas, tidak ada aliran nafas, dan diucapkan dengan suara menebal",
-    tempatKeluar: "Ujung Lidah",gambarMakh: 'image/aa.jpg',
+    tempatKeluar: "Ujung Lidah",
+    gambarMakh: 'image/aa.jpg',
   ),
   HurufModel(
     nama: "Dhold",
@@ -211,7 +217,8 @@ List listHuruf = [
     suaraD: "moonless.mp3",
     karakter:
         "Menyentuhkan ujung lidah dengan dinding dua gigi seri bagian atas. Tanpa mengalirnya udara. Suara tebal, mengangkat pangkal lidah dan bagian depan menutup langit-langit",
-    tempatKeluar: "Ujung Lidah",gambarMakh: 'image/aa.jpg',
+    tempatKeluar: "Ujung Lidah",
+    gambarMakh: 'image/aa.jpg',
   ),
   HurufModel(
     nama: "'Ain",
@@ -222,7 +229,8 @@ List listHuruf = [
     suaraD: "moonless.mp3",
     karakter:
         "Menyerupai pengucapan huruf 'a' dengan suara berasal dari tenggorokan. Seperti suara tangisan bayi. Tidak mendengung",
-    tempatKeluar: "Tengah Tenggorokan",gambarMakh: 'image/aa.jpg',
+    tempatKeluar: "Tengah Tenggorokan",
+    gambarMakh: 'image/aa.jpg',
   ),
   HurufModel(
     nama: "Ghoin",
@@ -233,7 +241,8 @@ List listHuruf = [
     suaraD: "moonless.mp3",
     karakter:
         "Keluar dari tenggorokan yang terdekat dari rongga mulut, tanpa mengalir udaranya, tanpa ada serak",
-    tempatKeluar: "Ujung Tenggorokan",gambarMakh: 'image/aa.jpg',
+    tempatKeluar: "Ujung Tenggorokan",
+    gambarMakh: 'image/aa.jpg',
   ),
   HurufModel(
     nama: "Fa'",
@@ -244,7 +253,8 @@ List listHuruf = [
     suaraD: "moonless.mp3",
     karakter:
         "Menyentuhkan ujung dua gigi seri bagian atas dengan bibir bawah bagian dalam dan mengalirnya udara",
-    tempatKeluar: "Bibir",gambarMakh: 'image/aa.jpg',
+    tempatKeluar: "Bibir",
+    gambarMakh: 'image/aa.jpg',
   ),
   HurufModel(
     nama: "Qof",
@@ -254,7 +264,8 @@ List listHuruf = [
     suaraK: "eventually.mp3",
     suaraD: "moonless.mp3",
     karakter: "Menyentuhkan pangkal lidah dengan langit langit bagian belakang",
-    tempatKeluar: "Pangkal Lidah",gambarMakh: 'image/aa.jpg',
+    tempatKeluar: "Pangkal Lidah",
+    gambarMakh: 'image/aa.jpg',
   ),
   HurufModel(
     nama: "Kaf",
@@ -265,7 +276,8 @@ List listHuruf = [
     suaraD: "moonless.mp3",
     karakter:
         "Menyentuhkan pangkal lidah dengan langit-langit bagian belakang, dengan mengalirkan udara dengan lembut",
-    tempatKeluar: "Pangkal Lidah",gambarMakh: 'image/aa.jpg',
+    tempatKeluar: "Pangkal Lidah",
+    gambarMakh: 'image/aa.jpg',
   ),
   HurufModel(
     nama: "Lam",
@@ -275,7 +287,8 @@ List listHuruf = [
     suaraK: "eventually.mp3",
     suaraD: "moonless.mp3",
     karakter: "Menyentuhkan lidah terdekat dengan langit-langit bagian depan",
-    tempatKeluar: "Ujung Lidah",gambarMakh: 'image/aa.jpg',
+    tempatKeluar: "Ujung Lidah",
+    gambarMakh: 'image/aa.jpg',
   ),
   HurufModel(
     nama: "Mim",
@@ -285,7 +298,8 @@ List listHuruf = [
     suaraK: "eventually.mp3",
     suaraD: "moonless.mp3",
     karakter: "Merapatkan kedua bibir, tidak ada angin yang keluar",
-    tempatKeluar: "Bibir",gambarMakh: 'image/aa.jpg',
+    tempatKeluar: "Bibir",
+    gambarMakh: 'image/aa.jpg',
   ),
   HurufModel(
     nama: "Nun",
@@ -295,7 +309,8 @@ List listHuruf = [
     suaraK: "eventually.mp3",
     suaraD: "moonless.mp3",
     karakter: "Menyentuhkan lidah terdekat dengan langit-langit bagian depan",
-    tempatKeluar: "Ujung Lidah",gambarMakh: 'image/aa.jpg',
+    tempatKeluar: "Ujung Lidah",
+    gambarMakh: 'image/aa.jpg',
   ),
   HurufModel(
     nama: "Ha",
@@ -306,7 +321,8 @@ List listHuruf = [
     suaraD: "moonless.mp3",
     karakter:
         "Keluar dari tenggorokan yang terjauh. Seperti ucapan saat kita mempunyai ide 'Aha!'",
-    tempatKeluar: "Pangkal Tenggorokan",gambarMakh: 'image/aa.jpg',
+    tempatKeluar: "Pangkal Tenggorokan",
+    gambarMakh: 'image/aa.jpg',
   ),
   HurufModel(
     nama: "Wauw",
@@ -316,7 +332,8 @@ List listHuruf = [
     suaraK: "eventually.mp3",
     suaraD: "moonless.mp3",
     karakter: "Dengan menyatukan dua bibir kedepan",
-    tempatKeluar: "Bibir",gambarMakh: 'image/aa.jpg',
+    tempatKeluar: "Bibir",
+    gambarMakh: 'image/aa.jpg',
   ),
   HurufModel(
     nama: "Ya'",
@@ -326,7 +343,8 @@ List listHuruf = [
     suaraK: "eventually.mp3",
     suaraD: "moonless.mp3",
     karakter: "Bagian Tengah lidah disentuhkan dengan langit-langit",
-    tempatKeluar: "Tengah  Lidah",gambarMakh: 'image/aa.jpg',
+    tempatKeluar: "Tengah  Lidah",
+    gambarMakh: 'image/aa.jpg',
   ),
 ];
 
