@@ -516,8 +516,8 @@ class _GameTryState extends State<GameTry> {
       padding: const EdgeInsets.all(7),
       child: Container(
         //kotak-kotak
-        height: 50,
-        width: 50,
+        height: MediaQuery.of(context).size.width* 0.103,
+        width: MediaQuery.of(context).size.width* 0.103,
         decoration: BoxDecoration(
           color: Color(0xffFFFFFF),
           boxShadow: [
@@ -909,8 +909,8 @@ class _GameTryState extends State<GameTry> {
       padding: const EdgeInsets.all(7),
       child: Container(
         //kotak-kotak
-        height: 50,
-        width: 50,
+        height: MediaQuery.of(context).size.width* 0.103,
+        width: MediaQuery.of(context).size.width* 0.103,
         decoration: BoxDecoration(
             color: Color(0xffF57c00),
             boxShadow: [
@@ -1032,8 +1032,8 @@ class _GameTryState extends State<GameTry> {
     return Padding(
       padding: const EdgeInsets.all(7),
       child: Container(
-          height: 50,
-          width: 50,
+          height: MediaQuery.of(context).size.width* 0.103,
+          width: MediaQuery.of(context).size.width* 0.103,
           decoration: BoxDecoration(
             color: Colors.black12,
             borderRadius: BorderRadius.all(Radius.circular(6)),
