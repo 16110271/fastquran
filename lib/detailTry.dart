@@ -179,8 +179,8 @@ class _DetailTryAppState extends State<DetailTryApp> {
                             });
                           },
                           child: Container(
-                            height: 50,
-                            width: 110,
+                            height: MediaQuery.of(context).size.width* 0.11,
+                            width: MediaQuery.of(context).size.width* 0.24,
                             decoration: new BoxDecoration(
                                 color: fathah ? activeColor : inactiveColor,
                                 boxShadow: [
@@ -219,8 +219,8 @@ class _DetailTryAppState extends State<DetailTryApp> {
                             });
                           },
                           child: Container(
-                            height: 50,
-                            width: 110,
+                            height: MediaQuery.of(context).size.width* 0.11,
+                            width: MediaQuery.of(context).size.width* 0.24,
                             decoration: new BoxDecoration(
                                 color: kasrah ? activeColor : inactiveColor,
                                 boxShadow: [
@@ -260,8 +260,8 @@ class _DetailTryAppState extends State<DetailTryApp> {
                             });
                           },
                           child: Container(
-                            height: 50,
-                            width: 110,
+                            height: MediaQuery.of(context).size.width* 0.11,
+                            width: MediaQuery.of(context).size.width* 0.24,
                             decoration: new BoxDecoration(
                                 color: dhomah ? activeColor : inactiveColor,
                                 boxShadow: [
@@ -307,11 +307,11 @@ class _DetailTryAppState extends State<DetailTryApp> {
                                   fontFamily: 'Montserrat'),
                               children: <TextSpan>[
                             TextSpan(
-                                text: "Huruf ", style: TextStyle(fontSize: 30)),
+                                text: "Huruf ", style: TextStyle(fontSize: MediaQuery.of(context).size.width* 0.062)),
                             TextSpan(
                                 text: widget.huruf.nama,
                                 style: TextStyle(
-                                    fontWeight: FontWeight.bold, fontSize: 30)),
+                                    fontWeight: FontWeight.bold, fontSize: MediaQuery.of(context).size.width* 0.062)),
                           ])
                           //"Huruf " + widget.huruf.nama,
                           // style: TextStyle(
@@ -326,26 +326,26 @@ class _DetailTryAppState extends State<DetailTryApp> {
                         child: Text(
                           "Tempat Keluar Huruf",
                           style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 20),
+                              fontWeight: FontWeight.bold, fontSize: MediaQuery.of(context).size.width* 0.043),
                         ),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(left: 1.0, top: 10),
                         child: Text(widget.huruf.tempatKeluar,
-                            style: TextStyle(fontSize: 17)),
+                            style: TextStyle(fontSize: MediaQuery.of(context).size.width* 0.036)),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(top: 40),
                         child: Text(
                           "Cara Pengucapan",
                           style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 20),
+                              fontWeight: FontWeight.bold, fontSize: MediaQuery.of(context).size.width* 0.043),
                         ),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(left: 1.0, top: 10),
                         child: Text(widget.huruf.karakter,
-                            style: TextStyle(fontSize: 17, height: 1.5)),
+                            style: TextStyle(fontSize: MediaQuery.of(context).size.width* 0.036, height: 1.5)),
                       ),
                     ],
                   ),
@@ -394,7 +394,7 @@ class _DetailTryAppState extends State<DetailTryApp> {
                               style: TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold,
-                                  fontSize: 20),
+                                  fontSize: MediaQuery.of(context).size.width* 0.043),
                             ),
                             Icon(
                               Icons.play_arrow,
@@ -451,21 +451,24 @@ class _DetailTryAppState extends State<DetailTryApp> {
 gambarFathah() {
   return Container(
     //fathah
-    padding: EdgeInsets.only(top: 25, left: 120),
-    child: Row(children: <Widget>[
-      Text('  َ ',
-          style: TextStyle(
-              color: Colors.black,
-              fontSize: 150,
-              fontFamily: 'DUBAI',
-              shadows: [
-                Shadow(
-                  color: Colors.black26,
-                  blurRadius: 6.0,
-                  offset: Offset(4, 4),
-                )
-              ])),
-    ]),
+     padding: EdgeInsets.only(top: 25, left: 120),
+    child: Row(
+        // mainAxisAlignment: MainAxisAlignment.center,
+        // crossAxisAlignment: CrossAxisAlignment.center,
+        children: <Widget>[
+          Text('  َ ',
+              style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 150,
+                  fontFamily: 'DUBAI',
+                  shadows: [
+                    Shadow(
+                      color: Colors.black26,
+                      blurRadius: 6.0,
+                      offset: Offset(4, 4),
+                    )
+                  ])),
+        ]),
   );
 }
 
