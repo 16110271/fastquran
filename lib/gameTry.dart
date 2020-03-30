@@ -544,7 +544,7 @@ class _GameTryState extends State<GameTry> {
         child: Column(
       children: <Widget>[
         Padding(
-          padding: EdgeInsets.only(top: pad.top * 13.5, left: 10),
+          padding: EdgeInsets.only(top: 50, left: 10),
           child: Row(
             //baris 1
             children: <Widget>[
