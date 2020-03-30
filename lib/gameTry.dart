@@ -75,6 +75,7 @@ class _GameTryState extends State<GameTry> {
 
   @override
   Widget build(BuildContext context) {
+    EdgeInsets pad = MediaQuery.of(context).padding;
     return Scaffold(
       key: scaffoldKey,
       appBar: AppBar(
@@ -162,7 +163,7 @@ class _GameTryState extends State<GameTry> {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.only(top: 390),
+          padding: EdgeInsets.only(top: pad.top * 19),
           child: Center(
             child: Container(
               // color: Colors.blueGrey,
@@ -171,7 +172,7 @@ class _GameTryState extends State<GameTry> {
                 child: ListView(
                   children: <Widget>[
                     Padding(
-                      padding: const EdgeInsets.only(bottom: 10, top: 10),
+                      padding: const EdgeInsets.only(bottom: 10),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
@@ -543,7 +544,7 @@ class _GameTryState extends State<GameTry> {
         child: Column(
       children: <Widget>[
         Padding(
-          padding: const EdgeInsets.only(top: 50, left: 10),
+          padding: EdgeInsets.only(top: pad.top * 13.5, left: 10),
           child: Row(
             //baris 1
             children: <Widget>[
