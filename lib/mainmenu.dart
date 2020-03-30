@@ -15,6 +15,7 @@ class MainMenu extends StatefulWidget {
 class _MainMenuState extends State<MainMenu> {
   @override
   Widget build(BuildContext context) {
+    EdgeInsets pad = MediaQuery.of(context).padding;
     return Scaffold(
       backgroundColor: Color(0xffEFEFEF),
       body: Stack(
@@ -125,13 +126,9 @@ class _MainMenuState extends State<MainMenu> {
           ),
           Container(
             width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height-MediaQuery.of(context).padding.top -
-                  kToolbarHeight,
+            height: MediaQuery.of(context).size.height,
             child: Padding(
-              padding: const EdgeInsets.only(
-                top: 255,
-                bottom: 0,
-              ), // left: 40, right: 40),
+              padding: EdgeInsets.only(top: pad.top*10.6),
               child: InkWell(
                 onTap: () {
                   Navigator.push(context,

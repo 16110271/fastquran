@@ -43,6 +43,7 @@ class _DetailTryAppState extends State<DetailTryApp> {
   @override
   Widget build(BuildContext context) {
     print(widget.huruf.kategori);
+    EdgeInsets pad = MediaQuery.of(context).padding;
     return Scaffold(
         backgroundColor: Color(0xffFFFFFF),
         body: Stack(
@@ -80,9 +81,24 @@ class _DetailTryAppState extends State<DetailTryApp> {
                 ),
               ),
             ),
-            fathah == true ? gambarFathah() : Container(),
-            dhomah == true ? gambarDhomah() : Container(),
-            kasrah == true ? gambarKasrah() : Container(),
+            Padding(
+              padding: EdgeInsets.only(top: pad.top*1.5, right:80),
+              child: Container(
+                child: fathah == true ? gambarFathah() : Container(),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(top: pad.top*1.5, right:80),
+              child: Container(
+                child: dhomah == true ? gambarDhomah() : Container(),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(top: pad.top*4.3, right:80),
+              child: Container(
+                child: kasrah == true ? gambarKasrah() : Container(),
+              ),
+            ),
             Padding(
               //top button
               padding: const EdgeInsets.only(top: 40, left: 0),
@@ -161,7 +177,7 @@ class _DetailTryAppState extends State<DetailTryApp> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 270),
+              padding: EdgeInsets.only(top: pad.top * 13.5),
               child: Container(
                 width: MediaQuery.of(context).size.width,
                 child: Row(
@@ -179,8 +195,8 @@ class _DetailTryAppState extends State<DetailTryApp> {
                             });
                           },
                           child: Container(
-                            height: MediaQuery.of(context).size.width* 0.11,
-                            width: MediaQuery.of(context).size.width* 0.24,
+                            height: MediaQuery.of(context).size.width * 0.11,
+                            width: MediaQuery.of(context).size.width * 0.24,
                             decoration: new BoxDecoration(
                                 color: fathah ? activeColor : inactiveColor,
                                 boxShadow: [
@@ -219,8 +235,8 @@ class _DetailTryAppState extends State<DetailTryApp> {
                             });
                           },
                           child: Container(
-                            height: MediaQuery.of(context).size.width* 0.11,
-                            width: MediaQuery.of(context).size.width* 0.24,
+                            height: MediaQuery.of(context).size.width * 0.11,
+                            width: MediaQuery.of(context).size.width * 0.24,
                             decoration: new BoxDecoration(
                                 color: kasrah ? activeColor : inactiveColor,
                                 boxShadow: [
@@ -260,8 +276,8 @@ class _DetailTryAppState extends State<DetailTryApp> {
                             });
                           },
                           child: Container(
-                            height: MediaQuery.of(context).size.width* 0.11,
-                            width: MediaQuery.of(context).size.width* 0.24,
+                            height: MediaQuery.of(context).size.width * 0.11,
+                            width: MediaQuery.of(context).size.width * 0.24,
                             decoration: new BoxDecoration(
                                 color: dhomah ? activeColor : inactiveColor,
                                 boxShadow: [
@@ -291,12 +307,12 @@ class _DetailTryAppState extends State<DetailTryApp> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 360),
+              padding: EdgeInsets.fromLTRB(20, pad.top * 19.2, 0, 0),
               child: Container(
                 width: MediaQuery.of(context).size.width,
                 height: MediaQuery.of(context).size.height * 0.5,
                 child: Padding(
-                  padding: const EdgeInsets.only(left: 20, top: 30),
+                  padding: EdgeInsets.only(left: 0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
@@ -307,11 +323,18 @@ class _DetailTryAppState extends State<DetailTryApp> {
                                   fontFamily: 'Montserrat'),
                               children: <TextSpan>[
                             TextSpan(
-                                text: "Huruf ", style: TextStyle(fontSize: MediaQuery.of(context).size.width* 0.062)),
+                                text: "Huruf ",
+                                style: TextStyle(
+                                    fontSize:
+                                        MediaQuery.of(context).size.width *
+                                            0.062)),
                             TextSpan(
                                 text: widget.huruf.nama,
                                 style: TextStyle(
-                                    fontWeight: FontWeight.bold, fontSize: MediaQuery.of(context).size.width* 0.062)),
+                                    fontWeight: FontWeight.bold,
+                                    fontSize:
+                                        MediaQuery.of(context).size.width *
+                                            0.062)),
                           ])
                           //"Huruf " + widget.huruf.nama,
                           // style: TextStyle(
@@ -326,26 +349,35 @@ class _DetailTryAppState extends State<DetailTryApp> {
                         child: Text(
                           "Tempat Keluar Huruf",
                           style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: MediaQuery.of(context).size.width* 0.043),
+                              fontWeight: FontWeight.bold,
+                              fontSize:
+                                  MediaQuery.of(context).size.width * 0.043),
                         ),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(left: 1.0, top: 10),
                         child: Text(widget.huruf.tempatKeluar,
-                            style: TextStyle(fontSize: MediaQuery.of(context).size.width* 0.036)),
+                            style: TextStyle(
+                                fontSize:
+                                    MediaQuery.of(context).size.width * 0.036)),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(top: 40),
                         child: Text(
                           "Cara Pengucapan",
                           style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: MediaQuery.of(context).size.width* 0.043),
+                              fontWeight: FontWeight.bold,
+                              fontSize:
+                                  MediaQuery.of(context).size.width * 0.043),
                         ),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(left: 1.0, top: 10),
                         child: Text(widget.huruf.karakter,
-                            style: TextStyle(fontSize: MediaQuery.of(context).size.width* 0.036, height: 1.5)),
+                            style: TextStyle(
+                                fontSize:
+                                    MediaQuery.of(context).size.width * 0.036,
+                                height: 1.5)),
                       ),
                     ],
                   ),
@@ -353,7 +385,7 @@ class _DetailTryAppState extends State<DetailTryApp> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 390, right: 15),
+              padding: EdgeInsets.only(top: pad.top * 19.2, right: 20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
@@ -394,7 +426,8 @@ class _DetailTryAppState extends State<DetailTryApp> {
                               style: TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold,
-                                  fontSize: MediaQuery.of(context).size.width* 0.043),
+                                  fontSize: MediaQuery.of(context).size.width *
+                                      0.043),
                             ),
                             Icon(
                               Icons.play_arrow,
@@ -407,14 +440,14 @@ class _DetailTryAppState extends State<DetailTryApp> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 480, right: 15),
+              padding: EdgeInsets.only(top: pad.top * 22.8, right: 20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
                   Container(
                     child: IconButton(
                       icon: Icon(Icons.crop_original),
-                      iconSize: 30,
+                      iconSize: MediaQuery.of(context).size.width * 0.09,
                       color: Colors.black,
                       onPressed: () {
                         showDialog(
@@ -451,12 +484,11 @@ class _DetailTryAppState extends State<DetailTryApp> {
 gambarFathah() {
   return Container(
     //fathah
-     padding: EdgeInsets.only(top: 25, left: 120),
     child: Row(
-        // mainAxisAlignment: MainAxisAlignment.center,
-        // crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Text('  َ ',
+          Text(' َ',
               style: TextStyle(
                   color: Colors.black,
                   fontSize: 150,
@@ -475,41 +507,45 @@ gambarFathah() {
 gambarDhomah() {
   return Container(
     //dhomah
-    padding: EdgeInsets.only(top: 30, left: 120),
-    child: Row(children: <Widget>[
-      Text('  ُ ',
-          style: TextStyle(
-              color: Colors.black,
-              fontSize: 150,
-              fontFamily: 'DUBAI',
-              shadows: [
-                Shadow(
-                  color: Colors.black26,
-                  blurRadius: 6.0,
-                  offset: Offset(4, 4),
-                )
-              ])),
-    ]),
+    child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Text(' ُ',
+              style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 150,
+                  fontFamily: 'DUBAI',
+                  shadows: [
+                    Shadow(
+                      color: Colors.black26,
+                      blurRadius: 6.0,
+                      offset: Offset(4, 4),
+                    )
+                  ])),
+        ]),
   );
 }
 
 gambarKasrah() {
   return Container(
     //kasrah
-    padding: EdgeInsets.only(top: 80, left: 120),
-    child: Row(children: <Widget>[
-      Text('  ِ ',
-          style: TextStyle(
-              color: Colors.black,
-              fontSize: 150,
-              fontFamily: 'DUBAI',
-              shadows: [
-                Shadow(
-                  color: Colors.black26,
-                  blurRadius: 6.0,
-                  offset: Offset(4, 4),
-                )
-              ])),
-    ]),
+    child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Text(' ِ',
+              style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 150,
+                  fontFamily: 'DUBAI',
+                  shadows: [
+                    Shadow(
+                      color: Colors.black26,
+                      blurRadius: 6.0,
+                      offset: Offset(4, 4),
+                    )
+                  ])),
+        ]),
   );
 }
