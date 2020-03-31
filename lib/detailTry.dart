@@ -82,19 +82,19 @@ class _DetailTryAppState extends State<DetailTryApp> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(top: pad.top*1.5, right:80),
+              padding: EdgeInsets.only(top: pad.top * 1.3, right: 73),
               child: Container(
                 child: fathah == true ? gambarFathah() : Container(),
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(top: pad.top*1.5, right:80),
+              padding: EdgeInsets.only(top: pad.top * 1.3, right: 73),
               child: Container(
                 child: dhomah == true ? gambarDhomah() : Container(),
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(top: pad.top*4.3, right:80),
+              padding: EdgeInsets.only(top: pad.top * 3.6, right: 80),
               child: Container(
                 child: kasrah == true ? gambarKasrah() : Container(),
               ),
@@ -177,7 +177,7 @@ class _DetailTryAppState extends State<DetailTryApp> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(top: pad.top * 13.5),
+              padding: EdgeInsets.only(top: pad.top * 11.5),
               child: Container(
                 width: MediaQuery.of(context).size.width,
                 child: Row(
@@ -307,7 +307,7 @@ class _DetailTryAppState extends State<DetailTryApp> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.fromLTRB(20, pad.top * 19.2, 0, 0),
+              padding: EdgeInsets.fromLTRB(20, pad.top * 16.6, 0, 0),
               child: Container(
                 width: MediaQuery.of(context).size.width,
                 height: MediaQuery.of(context).size.height * 0.5,
@@ -385,7 +385,7 @@ class _DetailTryAppState extends State<DetailTryApp> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(top: pad.top * 19.2, right: 20),
+              padding: EdgeInsets.only(top: pad.top * 16.5, right: 20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
@@ -440,7 +440,7 @@ class _DetailTryAppState extends State<DetailTryApp> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(top: pad.top * 22.8, right: 20),
+              padding: EdgeInsets.only(top: pad.top * 20, right: 20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
@@ -454,7 +454,23 @@ class _DetailTryAppState extends State<DetailTryApp> {
                             context: context,
                             builder: (BuildContext context) {
                               return CustomAlertDialog(
-                                  content: Image.asset(widget.huruf.gambarMakh),
+                                
+                                  content: Container(
+                                    height: 350,
+                                    child: Column(children: <Widget>[
+                                      Text('Tempat keluar huruf '+ widget.huruf.nama, style: TextStyle(
+                                                  fontWeight: FontWeight.bold,
+                                                  fontSize: 20)),
+                                      Padding(
+                                        padding: const EdgeInsets.only(top:10.0),
+                                        child: Image.asset(widget.huruf.gambarMakh),
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.only(top:10.0),
+                                        child: Text(widget.huruf.tempatKeluar),
+                                      )
+                                    ]),
+                                  ),
                                   actions: <Widget>[
                                     FlatButton(
                                       child: Text(

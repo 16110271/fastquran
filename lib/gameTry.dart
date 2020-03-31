@@ -163,7 +163,7 @@ class _GameTryState extends State<GameTry> {
           ),
         ),
         Padding(
-          padding: EdgeInsets.only(top: pad.top * 19),
+          padding: EdgeInsets.only(top: pad.top * 16.6),
           child: Center(
             child: Container(
               // color: Colors.blueGrey,
@@ -517,8 +517,8 @@ class _GameTryState extends State<GameTry> {
       padding: const EdgeInsets.all(7),
       child: Container(
         //kotak-kotak
-        height: MediaQuery.of(context).size.width* 0.103,
-        width: MediaQuery.of(context).size.width* 0.103,
+        height: MediaQuery.of(context).size.width* 0.12,
+        width: MediaQuery.of(context).size.width* 0.12,
         decoration: BoxDecoration(
           color: Color(0xffFFFFFF),
           boxShadow: [
@@ -910,8 +910,8 @@ class _GameTryState extends State<GameTry> {
       padding: const EdgeInsets.all(7),
       child: Container(
         //kotak-kotak
-        height: MediaQuery.of(context).size.width* 0.103,
-        width: MediaQuery.of(context).size.width* 0.103,
+        height: MediaQuery.of(context).size.width* 0.12,
+        width: MediaQuery.of(context).size.width* 0.12,
         decoration: BoxDecoration(
             color: Color(0xffF57c00),
             boxShadow: [
@@ -950,7 +950,7 @@ class _GameTryState extends State<GameTry> {
                 }
 
                 if (completed == true) {
-                  audioCache.play('correct.mp3');
+                  audioCache.play('win.mp3');
                   showDialog(
                       context: context,
                       builder: (BuildContext context) {
@@ -1033,8 +1033,8 @@ class _GameTryState extends State<GameTry> {
     return Padding(
       padding: const EdgeInsets.all(7),
       child: Container(
-          height: MediaQuery.of(context).size.width* 0.103,
-          width: MediaQuery.of(context).size.width* 0.103,
+          height: MediaQuery.of(context).size.width* 0.12,
+          width: MediaQuery.of(context).size.width* 0.12,
           decoration: BoxDecoration(
             color: Colors.black12,
             borderRadius: BorderRadius.all(Radius.circular(6)),

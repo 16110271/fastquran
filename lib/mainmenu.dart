@@ -64,7 +64,7 @@ class _MainMenuState extends State<MainMenu> {
                             padding: EdgeInsets.only(top: 26),
                             child: Text("Learning Quran Easier!",
                                 style: TextStyle(
-                                    color: Colors.white, fontSize: MediaQuery.of(context).size.width * 0.04)),
+                                    color: Colors.white, fontSize: MediaQuery.of(context).size.width * 0.05)),
                           )
                         ],
                       ),
@@ -128,7 +128,7 @@ class _MainMenuState extends State<MainMenu> {
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height,
             child: Padding(
-              padding: EdgeInsets.only(top: pad.top*10.6),
+              padding: EdgeInsets.only(top: pad.top*10.3),
               child: InkWell(
                 onTap: () {
                   Navigator.push(context,
@@ -189,7 +189,7 @@ class _MainMenuState extends State<MainMenu> {
                                             ),
                                             Padding(
                                               padding:
-                                                  const EdgeInsets.only(top: 8),
+                                                  const EdgeInsets.only(top: 5),
                                               child: Text(
                                                 "Mempelajari karakter huruf hijaiyah dan bagaimana cara pengucapan secara benar sesuai makhrajul hurufnya.",
                                                 style: TextStyle(
@@ -197,7 +197,7 @@ class _MainMenuState extends State<MainMenu> {
                                                         MediaQuery.of(context)
                                                                 .size
                                                                 .width *
-                                                            0.028),
+                                                            0.031),
                                               ),
                                             )
                                           ]),
@@ -273,12 +273,12 @@ class _MainMenuState extends State<MainMenu> {
                                                 ),
                                                 Padding(
                                                   padding: const EdgeInsets.only(
-                                                      top: 8),
+                                                      top: 5),
                                                   child: Text(
-                                                    "Sebuah permainan drag and drop huruf hijaiyah sesuai dengan letak tempat keluarnya.",
-                                                    style: TextStyle(
+                                                    "Sebuah permainan drag and drop huruf hijaiyah sesuai dengan letak tempat keluarnya.", 
+                                                    style: TextStyle(height: 1.28, 
                                                         fontSize:
-                                                            MediaQuery.of(context).size.width * 0.028),
+                                                            MediaQuery.of(context).size.width * 0.031),
                                                   ),
                                                 )
                                               ]),
