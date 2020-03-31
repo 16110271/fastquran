@@ -977,29 +977,23 @@ class _GameTryState extends State<GameTry> {
                                 Text(
                                     'Kamu telah berhasil menyelesaikan game ini, dan kamu telah mengetahui tempat keluar huruf secara tepat! ',
                                     textAlign: TextAlign.center),
-                                Padding(
-                                  padding: const EdgeInsets.only(top: 20.0),
-                                  child: Container(
-                                    height: 50,
-                                    decoration: new BoxDecoration(
-                                      color: const Color(
-                                          0xffF57c00), //Color(0xFF33b17c),
-                                    ),
-                                    child: Center(
-                                      child: new Text(
-                                        'Alhamdulillah',
-                                        style: TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 18.0,
-                                        ),
-                                        textAlign: TextAlign.center,
-                                      ),
-                                    ),
-                                  ),
-                                ),
                               ],
                             ),
                           ),
+                          actions: <Widget>[
+                                      FlatButton(
+                                        child: Text(
+                                          'Oke',
+                                          style: TextStyle(
+                                            color: Color(0xffF57c00),
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                        onPressed: () {
+                                          Navigator.of(context).pop();
+                                        },
+                                      ),
+                                    ]
                         );
                       });
                 }

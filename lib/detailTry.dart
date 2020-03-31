@@ -114,12 +114,7 @@ class _DetailTryAppState extends State<DetailTryApp> {
                         iconSize: 30,
                         color: Colors.black,
                         onPressed: () {
-                          Navigator.pushReplacement(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => DisplayListView(),
-                            ),
-                          );
+                          Navigator.pop(context);
                         },
                       ),
                       IconButton(
