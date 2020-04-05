@@ -820,8 +820,8 @@ class _GameTryState extends State<GameTry> {
                     color: Color(0xffF57c00),
                     shape: BoxShape.circle),
               ),
-              targetHuruf[7] == false ? widgetKotak(7) : dragableBox('خ'),
               targetHuruf[19] == false ? widgetKotak(19) : dragableBox('غ'),
+              targetHuruf[7] == false ? widgetKotak(7) : dragableBox('خ'),
             ],
           ),
         ),
@@ -858,8 +858,8 @@ class _GameTryState extends State<GameTry> {
                     color: Color(0xffF57c00),
                     shape: BoxShape.circle),
               ),
-              targetHuruf[6] == false ? widgetKotak(6) : dragableBox('ح'),
               targetHuruf[18] == false ? widgetKotak(18) : dragableBox('ع'),
+              targetHuruf[6] == false ? widgetKotak(6) : dragableBox('ح'),
             ],
           ),
         ),
@@ -877,7 +877,7 @@ class _GameTryState extends State<GameTry> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
-                      Text('3',
+                      Text('8',
                           style: TextStyle(
                               color: Colors.white, fontWeight: FontWeight.bold))
                     ]),
@@ -896,8 +896,8 @@ class _GameTryState extends State<GameTry> {
                     color: Color(0xffF57c00),
                     shape: BoxShape.circle),
               ),
-              targetHuruf[27] == false ? widgetKotak(27) : dragableBox('ھـ'),
               targetHuruf[1] == false ? widgetKotak(1) : dragableBox('ا'),
+              targetHuruf[27] == false ? widgetKotak(27) : dragableBox('ھـ'),
             ],
           ),
         ), //bawahnya
