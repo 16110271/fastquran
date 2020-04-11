@@ -94,14 +94,10 @@ class _MainMenuState extends State<MainMenu> {
                                           padding:
                                               const EdgeInsets.only(bottom: 20),
                                           child: Column(
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
                                             mainAxisSize: MainAxisSize.max,
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.start,
                                             children: <Widget>[
                                               Image.asset('image/logo.png',
-                                                  height: 40),
+                                                  height: 90),
                                             ],
                                           ),
                                         ),

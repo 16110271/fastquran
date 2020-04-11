@@ -27,9 +27,27 @@ class _SplashState extends State<Splash> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Center(
-            child: Image.asset('image/logo.png',
-                height: 90))
+        body: Stack(
+          children: <Widget>[
+            Center(
+                child: Image.asset('image/logo.png',
+                    height: 220)),
+            Padding(
+              padding: const EdgeInsets.only(bottom : 50),
+              child:
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: <Widget>[
+                      Center(
+                        child: Text('Version 1.0 | 2020 © FastQuran',
+                        style: TextStyle(color: Colors.black26, fontWeight: FontWeight.bold),),
+                      ),
+                    ],
+                  ),
+            )
+          ],
+        ),
+                
         );
   }
 }
