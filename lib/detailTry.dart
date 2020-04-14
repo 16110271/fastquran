@@ -449,7 +449,6 @@ class _DetailTryAppState extends State<DetailTryApp> {
                             context: context,
                             builder: (BuildContext context) {
                               return CustomAlertDialog(
-                                
                                   content: Container(
                                     height: 350,
                                     child: Column(children: <Widget>[
